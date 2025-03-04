@@ -8,6 +8,7 @@ import GatewayImg from "./GatewayImg.png";
 import BackedImg from "./BackedImg.png";
 import CardCollect from "./CardCollect.png";
 import RevenueImg from "./RevenueImg.png";
+import QoutientImg from "./QoutientImg.png";
 
 export {
   HeroBG,
@@ -20,4 +21,5 @@ export {
   BackedImg,
   CardCollect,
   RevenueImg,
+  QoutientImg,
 };
