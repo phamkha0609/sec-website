@@ -141,10 +141,10 @@ const CoinListItem = ({ props, onSelect, close, isVisible }: CoinListItem) => {
       align={"center"}
       gap={"sm"}
       onClick={() => {
-        if (onSelect) {
+        if (onSelect && isVisible) {
           onSelect(props);
+          close();
         }
-        close();
       }}
     >
       <Box>
@@ -153,7 +153,7 @@ const CoinListItem = ({ props, onSelect, close, isVisible }: CoinListItem) => {
         </AspectRatio>
       </Box>
       <Box>
-        <Text>{props.name}</Text>
+        <Text fz={{ base: 12, lg: 14 }}>{props.name}</Text>
       </Box>
     </Flex>
   );
