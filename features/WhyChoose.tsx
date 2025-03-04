@@ -137,9 +137,10 @@ const FeatureItem = ({ icon, subTitle, title, content }: FeatureItemProps) => (
       style={{
         borderRadius: 12,
       }}
+      w={"fit-content"}
     >
-      <Box>{icon}</Box>
-      <Text lh={"100%"} c={"#fe8833"} fz={{ base: 11, lg: 16 }}>
+      <Box mb={-6}>{icon}</Box>
+      <Text fw={500} lh={"100%"} c={"#fe8833"} fz={{ base: 11, lg: 16 }}>
         {subTitle}
       </Text>
     </Flex>

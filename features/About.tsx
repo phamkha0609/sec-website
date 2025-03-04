@@ -27,7 +27,7 @@ function About() {
       <Box
         pos={"absolute"}
         right={{ base: "5%", lg: "5%", xl: "5%" }}
-        top={{ base: "70%", lg: "80%", xl: "60%" }}
+        bottom={{ base: "5%", lg: "5%", xl: "3%" }}
       >
         <AspectRatio ratio={279 / 269} w={{ base: 80, lg: 279, xl: 419 }}>
           <Image src={CardCollect.src} alt="" />
@@ -38,7 +38,7 @@ function About() {
           <Container
             fluid
             px={{ lg: 160 }}
-            pt={{ base: 160, lg: 240, xl: 260 }}
+            pt={{ base: 160, lg: 240, xl: 360 }}
           >
             <Flex
               direction={{ base: "column", lg: "row" }}
@@ -76,7 +76,7 @@ function About() {
                 <AspectRatio ratio={503 / 569} w={{ base: "90%", lg: 503 }}>
                   <Image src={GatewayImg.src} alt="" />
                 </AspectRatio>
-                <Box mx={"auto"} w={"fit-content"}>
+                <Box mx={"auto"} w={"fit-content"} mt={{ base: 20, lg: 40 }}>
                   <Text fw={500} fz={14} c={"#1f2937"}>
                     Bridging Physical Silver with Digital Innovation
                   </Text>

@@ -93,9 +93,13 @@ function Revenue() {
       <Flex
         mt={{ base: 40, lg: 52, xl: 80 }}
         direction={{ base: "column", lg: "row" }}
-        gap={60}
+        justify={"space-between"}
+        gap={24}
       >
-        <Box w={{ base: "100%", lg: 465, xl: 689 }}>
+        <Box
+          w={{ base: "100%", lg: 465, xl: 689 }}
+          h={{ base: "auto", lg: 192, xl: 288 }}
+        >
           <AspectRatio ratio={698 / 617} w={"100%"}>
             <BackgroundImage src={RevenueImg.src} pos={"relative"}>
               <Box pos={"absolute"} right={"5%"} bottom={"5%"}>
@@ -114,7 +118,7 @@ function Revenue() {
           </AspectRatio>
         </Box>
 
-        <Flex wrap={"wrap"} w={{ base: "100%", lg: "65%" }}>
+        <Flex wrap={"wrap"} w={{ base: "100%", lg: 560, xl: 841 }}>
           {revenueData.map((e, i) => (
             <RevenueItem key={i} {...e} />
           ))}
@@ -131,7 +135,7 @@ const RevenueItem = ({ Icon, title }: RevenueItemProps) => {
   return (
     <Paper
       radius={10}
-      w={{ base: 119, lg: 186, xl: 280 }}
+      w={{ base: "33.33%", lg: 186, xl: 280 }}
       py={{ base: 42, lg: 64 }}
       ref={ref}
       style={{
@@ -145,6 +149,7 @@ const RevenueItem = ({ Icon, title }: RevenueItemProps) => {
         </AspectRatio>
 
         <Text
+          fw={500}
           fz={{ base: 12, lg: 20 }}
           mt={{ base: 16, lg: 32 }}
           ta={"center"}

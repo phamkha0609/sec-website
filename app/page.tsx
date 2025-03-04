@@ -4,6 +4,7 @@ import About from "../features/About";
 import WhyChoose from "../features/WhyChoose";
 import Revenue from "../features/Revenue";
 import Investors from "../features/Investors";
+import Pioneer from "../features/Pioneer";
 
 export default function HomePage() {
   return (
@@ -17,6 +18,7 @@ export default function HomePage() {
       <WhyChoose />
       <Revenue />
       <Investors />
+      <Pioneer />
     </Box>
   );
 }
