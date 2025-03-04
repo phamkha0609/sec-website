@@ -106,7 +106,7 @@ function Hero() {
               }}
             >
               <Box
-                visibleFrom="lg"
+                visibleFrom="md"
                 w={350}
                 h={306}
                 bg={"#040404"}
