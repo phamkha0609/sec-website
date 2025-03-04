@@ -8,8 +8,9 @@ import {
 import { theme } from "../theme";
 
 export const metadata = {
-  title: "Mantine Next.js template",
-  description: "I am using Mantine with Next.js!",
+  title: "SEC",
+  description:
+    "SEC is built to comprehensively address the pain points of the current silver market in Vietnam by integrating Blockchain and Crypto Currency technology into the silver trading ecosystem.",
 };
 
 export default function RootLayout({ children }: { children: any }) {
@@ -17,7 +18,7 @@ export default function RootLayout({ children }: { children: any }) {
     <html lang="en" {...mantineHtmlProps}>
       <head>
         <ColorSchemeScript />
-        <link rel="shortcut icon" href="/favicon.svg" />
+        <link rel="shortcut icon" href="/favicon.ico" />
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no"

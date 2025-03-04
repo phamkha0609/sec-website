@@ -1,7 +1,9 @@
 "use client";
 
 import { createTheme } from "@mantine/core";
+import { Didot, HelveticaNeue } from "./assets/fonts";
 
 export const theme = createTheme({
-  /* Put your mantine theme override here */
+  fontFamily: HelveticaNeue.style.fontFamily,
+  headings: { fontFamily: Didot.style.fontFamily },
 });

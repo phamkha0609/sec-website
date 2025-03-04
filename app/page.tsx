@@ -1,3 +1,10 @@
+import { Container, Text } from "@mantine/core";
+import Hero from "../features/Hero";
+
 export default function HomePage() {
-  return <div>Home page</div>;
+  return (
+    <>
+      <Hero />
+    </>
+  );
 }
