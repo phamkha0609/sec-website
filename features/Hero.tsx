@@ -1,18 +1,26 @@
 import {
   AspectRatio,
   BackgroundImage,
+  Badge,
   Box,
   BoxProps,
   Center,
   Container,
   Flex,
+  Image,
+  NavLink,
   Paper,
   Text,
   Title,
 } from "@mantine/core";
 import React from "react";
-import { HeroBG } from "../assets/imgs";
+import { HeroBG, HeroChart } from "../assets/imgs";
 import ArrowUp from "../assets/vectors/ArrowUp";
+import ArrowDown from "../assets/vectors/ArrowDown";
+import UpTrend from "../assets/vectors/UpTrend";
+import DownTrend from "../assets/vectors/DownTrend";
+import Link from "next/link";
+import HeroSwap from "../components/HeroSwap";
 
 function Hero() {
   return (
@@ -90,6 +98,7 @@ function Hero() {
             </Flex>
 
             <Flex
+              direction={{ base: "column", lg: "row" }}
               mt={{ base: 52, lg: 100 }}
               gap={15.5}
               style={{
@@ -132,7 +141,7 @@ function Hero() {
 }
 
 const itemStyle: BoxProps = {
-  w: { lg: 315 },
+  w: { base: 315, lg: 315 },
   h: { lg: 306 },
   bg: "#181818",
   px: { base: 10, lg: 20 },
@@ -153,7 +162,7 @@ const BalaceItem = () => (
       w={"fit-content"}
       radius={100}
       bg={"#ffffff22"}
-      mt={{ base: 24, lg: 42 }}
+      mt={{ base: 24, lg: 32 }}
       py={{ base: 2, lg: 4 }}
       px={{ base: 6, lg: 10 }}
     >
@@ -162,12 +171,7 @@ const BalaceItem = () => (
       </Text>
     </Paper>
 
-    <Flex
-      gap={6}
-      mt={{ base: 10, lg: 15.5 }}
-      justify={"center"}
-      align={"center"}
-    >
+    <Flex gap={6} mt={{ base: 6, lg: 10 }} justify={"center"} align={"center"}>
       <Text fz={{ base: 16, lg: 38 }} c={"#ffffffcc"}>
         0.00
       </Text>
@@ -176,8 +180,13 @@ const BalaceItem = () => (
       </Text>
     </Flex>
 
-    <Flex mt={{ base: 15, lg: 35 }}>
-      <Paper bg={"#ffffff10"} p={{ base: 4, lg: 8 }} radius={12}>
+    <Flex mt={{ base: 15, lg: 24 }} justify={"space-between"} gap={8}>
+      <Paper
+        bg={"#ffffff10"}
+        p={{ base: 4, lg: 8 }}
+        radius={12}
+        w={{ base: "50%", lg: "50%" }}
+      >
         <Flex align={"center"} gap={4}>
           <Center
             w={21}
@@ -196,12 +205,132 @@ const BalaceItem = () => (
 
           <Text c={"#ffffffcc"}>Income</Text>
         </Flex>
+
+        <Flex mt={{ base: 6, lg: 12 }} gap={{ base: 32, lg: 20 }}>
+          <Flex gap={6} justify={"center"} align={"center"}>
+            <Text c={"#ffffffcc"}>0.00</Text>
+            <Text c={"#ffffffcc"} fz={{ base: 6, lg: 8 }}>
+              USD
+            </Text>
+          </Flex>
+
+          <Badge fw={400} p={4} radius={4} color="#8BDBA344" c={"#00C270"}>
+            +16%
+          </Badge>
+        </Flex>
       </Paper>
-      <Paper></Paper>
+      <Paper
+        w={{ base: "50%", lg: "50%" }}
+        bg={"#ffffff10"}
+        p={{ base: 4, lg: 8 }}
+        radius={12}
+      >
+        <Flex align={"center"} gap={4}>
+          <Center
+            w={21}
+            h={21}
+            bg={"#fff"}
+            style={{
+              borderRadius: 21,
+            }}
+          >
+            <Box>
+              <AspectRatio ratio={8 / 10} w={8}>
+                <ArrowDown />
+              </AspectRatio>
+            </Box>
+          </Center>
+
+          <Text c={"#ffffffcc"}>Expense</Text>
+        </Flex>
+
+        <Flex mt={{ base: 6, lg: 12 }} gap={{ base: 32, lg: 20 }}>
+          <Flex gap={6} justify={"center"} align={"center"}>
+            <Text c={"#ffffffcc"}>0.00</Text>
+            <Text c={"#ffffffcc"} fz={{ base: 6, lg: 8 }}>
+              USD
+            </Text>
+          </Flex>
+
+          <Badge fw={400} p={4} radius={4} color="#DB8B8B44" c={"#FA5343"}>
+            -10%
+          </Badge>
+        </Flex>
+      </Paper>
     </Flex>
   </Box>
 );
-const SwapItem = () => <Box {...itemStyle}></Box>;
-const ChartItem = () => <Box {...itemStyle}></Box>;
+const SwapItem = () => (
+  <Box {...itemStyle}>
+    <Text c={"#ffffffcc"} ta={"center"} fz={{ lg: 18 }}>
+      Silver Swap
+    </Text>
+
+    <Box mt={{ base: 22, lg: 45 }}>
+      <HeroSwap />
+    </Box>
+  </Box>
+);
+const ChartItem = () => (
+  <Box {...itemStyle}>
+    <Text c={"#ffffffcc"} fz={{ lg: 18 }}>
+      Statistic
+    </Text>
+
+    <AspectRatio mt={{ base: 8, lg: 16 }} ratio={287 / 120} w={"100%"}>
+      <Image src={HeroChart.src} alt="" />
+    </AspectRatio>
+
+    <Flex mt={{ base: 12, lg: 26 }} justify={"space-between"}>
+      <Box>
+        <Text fz={{ base: 8, lg: 10 }} c={"#F2F5F7cc"}>
+          Avg monthly spend
+        </Text>
+        <Flex mt={{ base: 4, lg: 8 }} gap={6} align={"center"}>
+          <Text c={"#F2F5F7cc"} fz={{ lg: 14 }}>
+            820.00 USD
+          </Text>
+
+          <AspectRatio ratio={14 / 11} w={{ base: 10, lg: 14 }}>
+            <UpTrend />
+          </AspectRatio>
+
+          <Text fz={{ base: 8, lg: 10 }} c={"#00bf8e"}>
+            11.9%
+          </Text>
+        </Flex>
+      </Box>
+      <Box>
+        <Text fz={{ base: 8, lg: 10 }} c={"#F2F5F7cc"}>
+          Spent this month
+        </Text>
+        <Flex mt={{ base: 4, lg: 8 }} gap={6} align={"center"}>
+          <Text c={"#F2F5F7cc"} fz={{ lg: 14 }}>
+            440.00 USD
+          </Text>
+
+          <AspectRatio ratio={14 / 11} w={{ base: 10, lg: 14 }}>
+            <DownTrend />
+          </AspectRatio>
+
+          <Text fz={{ base: 8, lg: 10 }} c={"#d93c3c"}>
+            3.9%
+          </Text>
+        </Flex>
+      </Box>
+    </Flex>
+
+    <Box mt={{ base: 12, lg: 20 }} mx={"auto"} w={"fit-content"}>
+      <Link
+        href={"#"}
+        style={{
+          textDecorationColor: "#F2F5F7cc",
+        }}
+      >
+        <Text c={"#F2F5F7cc"}>See Details</Text>
+      </Link>
+    </Box>
+  </Box>
+);
 
 export default Hero;
