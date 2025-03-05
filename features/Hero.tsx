@@ -307,7 +307,7 @@ const BalaceItem = () => (
   </Box>
 );
 const SwapItem = () => (
-  <Box {...itemStyle} data-aos={"slide-up"}>
+  <Box {...itemStyle} data-aos={"slide-up"} data-aos-delay={100}>
     <Text c={"#ffffffcc"} ta={"center"} fz={{ lg: 18 }}>
       Silver Swap
     </Text>
@@ -318,7 +318,7 @@ const SwapItem = () => (
   </Box>
 );
 const ChartItem = () => (
-  <Box {...itemStyle} data-aos={"slide-up"}>
+  <Box {...itemStyle} data-aos={"slide-up"} data-aos-delay={200}>
     <Text c={"#ffffffcc"} fz={{ lg: 18 }}>
       Statistic
     </Text>

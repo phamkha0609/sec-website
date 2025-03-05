@@ -11,6 +11,7 @@ import Footer from "../features/Footer";
 import 'aos/dist/aos.css';
 import AOS from 'aos';
 import { useEffect } from "react";
+import Navbar from "../features/Header/Navbar";
 
 export default function HomePage() {
   useEffect(() => {
@@ -21,7 +22,9 @@ export default function HomePage() {
       style={{
         overflowX: "hidden",
       }}
+      pos={"relative"}
     >
+      <Navbar />
       <Hero />
       <About />
       <WhyChoose />
