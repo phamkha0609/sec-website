@@ -26,13 +26,13 @@ function Hero() {
   return (
     <BackgroundImage src={HeroBG.src}>
       <Container mih={"100vh"}>
-        <Center mih={"100vh"}>
+        <Center mih={"100vh"} pt={{base: 105, lg: 0}}>
           <Box>
             <Flex justify={"center"} align={"center"} gap={10}>
               <Text
                 lh={"100%"}
-                lts={-6}
-                fz={{ lg: 110 }}
+                lts={{base: -2, lg: -6}}
+                fz={{ base: 53, lg: 110 }}
                 fw={"500"}
                 style={{
                   background: "radial-gradient(#ffffff 60%, #000000 100%)",
@@ -47,7 +47,7 @@ function Hero() {
               <Box
                 w={{ lg: 180 }}
                 h={{ lg: 68 }}
-                bg={"linear-gradient(  #C0C0C066, #C0C0C044,  #00000044)"}
+                bg={"linear-gradient(  #3a3a3aaa,  #111111aa)"}
                 style={{
                   borderRadius: 100,
                   border: "2px solid #C0C0C088",
@@ -56,8 +56,8 @@ function Hero() {
             </Flex>
             <Title
               fw={400}
-              fz={{ lg: 150 }}
-              lts={-11}
+              fz={{  base: 53, lg: 150 }}
+              lts={{base: -5, lg: -11}}
               lh={"100%"}
               style={{
                 background: "radial-gradient(#ffffff 60%, #000000 100%)",
@@ -74,7 +74,7 @@ function Hero() {
               <Box
                 w={{ lg: 180 }}
                 h={{ lg: 68 }}
-                bg={"linear-gradient(  #C0C0C066, #C0C0C044,  #00000044)"}
+                bg={"linear-gradient( #000000, #303030aa)"}
                 style={{
                   borderRadius: 100,
                   border: "2px solid #C0C0C088",
@@ -82,8 +82,8 @@ function Hero() {
               ></Box>
               <Text
                 lh={"100%"}
-                lts={-6}
-                fz={{ lg: 110 }}
+                lts={{base: -2, lg: -6}}
+                fz={{  base: 53, lg: 110 }}
                 style={{
                   background: "radial-gradient(#ffffff 60%, #000000 100%)",
                   color: "transparent",

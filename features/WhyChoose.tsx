@@ -140,7 +140,7 @@ const FeatureItem = ({ icon, subTitle, title, content }: FeatureItemProps) => (
       w={"fit-content"}
     >
       <Box mb={-6}>{icon}</Box>
-      <Text fw={500} lh={"100%"} c={"#fe8833"} fz={{ base: 11, lg: 16 }}>
+      <Text fw={500} lh={"100%"} c={"#fe8833"} fz={{ base: 11, xl: 16, }}>
         {subTitle}
       </Text>
     </Flex>
@@ -148,13 +148,13 @@ const FeatureItem = ({ icon, subTitle, title, content }: FeatureItemProps) => (
     <Text
       lh={"120%"}
       fw={500}
-      mt={{ base: 40, lg: 60 }}
-      fz={{ base: 16, lg: 24 }}
+      mt={{ base: 40, xl: 60 }}
+      fz={{ base: 16, xl: 24 }}
     >
       {title}
     </Text>
 
-    <Text c={"#6b7280"} mt={{ base: 21, lg: 32 }} fz={{ base: 11, lg: 16 }}>
+    <Text lh={"150%"} c={"#6b7280"} mt={{ base: 21, lg: 32 }} fz={{ base: 11, lg: 16 }}>
       {content}
     </Text>
   </Box>

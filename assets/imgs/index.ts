@@ -14,6 +14,7 @@ import SECLogo from "./SECLogo.png";
 import CommunityBG from "./CommunityBG.png";
 import CommunityMobileBG from "./CommunityMobileBG.png";
 import DiscoverButton from "./DiscoverButton.png";
+import FooterBG from "./FooterBG.png";
 
 export {
   HeroBG,
@@ -32,4 +33,5 @@ export {
   CommunityBG,
   CommunityMobileBG,
   DiscoverButton,
+  FooterBG
 };
