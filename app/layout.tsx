@@ -6,11 +6,15 @@ import {
   mantineHtmlProps,
 } from "@mantine/core";
 import { theme } from "../theme";
+import { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "SEC",
   description:
     "SEC is built to comprehensively address the pain points of the current silver market in Vietnam by integrating Blockchain and Crypto Currency technology into the silver trading ecosystem.",
+  openGraph: {
+    images: "/Thumbnail.jpg"
+  }
 };
 
 export default function RootLayout({ children }: { children: any }) {
