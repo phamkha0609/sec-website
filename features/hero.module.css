@@ -1,0 +1,71 @@
+@keyframes move-anim {
+    0% {
+        top: -200px;
+        right: 120px;
+        transform: rotate(0deg) scale(1);
+        opacity: 0;
+    }
+    50% {
+        top: -100px;
+        right: 60px;
+        transform: rotate(-15deg) scale(1);
+        opacity: 1;
+    }
+    100% {
+        top: -5px;
+        right: 30px;
+        transform: rotate(-60deg) scale(0.75);
+        opacity: 0;
+    }
+}
+
+.gold{
+    animation: move-anim 6s linear infinite;
+}
+
+.gold2{
+    animation: move-anim 6s linear infinite;
+    animation-delay: 2s;
+}
+
+.gold3{
+    animation: move-anim 6s linear infinite;
+    animation-delay: 4s;
+}
+
+/* sec logo */
+
+@keyframes moveout-anim {
+    0% {
+        top: 0;
+        right: 30px;
+        transform: rotate(-60deg) scale(0.75);
+        opacity: 0;
+    }
+    50% {
+        top: 100px;
+        right: 150px;
+        transform: rotate(-15deg) scale(0.85);
+        opacity: 1;
+    }
+    100% {
+        top: 200px;
+        right: 300px;
+        transform: rotate(10deg) scale(1);
+        opacity: 0;
+    }
+}
+
+.sec {
+    animation: moveout-anim 6s linear infinite;
+}
+
+.sec2 {
+    animation: moveout-anim 6s linear infinite;
+    animation-delay: 2s;
+}
+
+.sec3 {
+    animation: moveout-anim 6s linear infinite;
+    animation-delay: 4s;
+}

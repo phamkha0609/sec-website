@@ -1,3 +1,5 @@
+"use client"
+
 import {
   AspectRatio,
   BackgroundImage,
@@ -14,7 +16,7 @@ import {
   Title,
 } from "@mantine/core";
 import React from "react";
-import { HeroBG, HeroChart } from "../assets/imgs";
+import { Gold, HeroBG, HeroChart, SECLogo } from "../assets/imgs";
 import ArrowUp from "../assets/vectors/ArrowUp";
 import ArrowDown from "../assets/vectors/ArrowDown";
 import UpTrend from "../assets/vectors/UpTrend";
@@ -22,17 +24,19 @@ import DownTrend from "../assets/vectors/DownTrend";
 import Link from "next/link";
 import HeroSwap from "../components/HeroSwap";
 
+import styles from "./hero.module.css"
+
 function Hero() {
   return (
     <BackgroundImage src={HeroBG.src}>
       <Container mih={"100vh"}>
-        <Center mih={"100vh"} pt={{base: 105, lg: 0}}>
+        <Center mih={"90vh"} pt={{base: 105, lg: 168, xl: 182}}>
           <Box>
             <Flex justify={"center"} align={"center"} gap={10}>
               <Text
                 lh={"100%"}
                 lts={{base: -2, lg: -6}}
-                fz={{ base: 53, lg: 110 }}
+                fz={{ base: 53, lg: 73, xl: 110 }}
                 fw={"500"}
                 style={{
                   background: "radial-gradient(#ffffff 60%, #000000 100%)",
@@ -45,18 +49,35 @@ function Hero() {
                 SILVER
               </Text>
               <Box
-                w={{ lg: 180 }}
-                h={{ lg: 68 }}
+                w={{ base: 119, xl: 180 }}
+                h={{ base: 44, xl: 68 }}
                 bg={"linear-gradient(  #3a3a3aaa,  #111111aa)"}
                 style={{
                   borderRadius: 100,
-                  border: "2px solid #C0C0C088",
+                  border: "1px solid #C0C0C088",
                 }}
-              ></Box>
+                pos={"relative"}
+              >
+                <Box opacity={0} pos={"absolute"} className={styles[`gold`]}>
+                  <AspectRatio ratio={68/95} w={{base: 36, lg: 68, xl: 68}}>
+                    <Image src={Gold.src} alt="" />
+                  </AspectRatio>
+                </Box>
+                <Box opacity={0} pos={"absolute"} className={styles[`gold2`]}>
+                  <AspectRatio ratio={68/95} w={{base: 36, lg: 68, xl: 68}}>
+                    <Image src={Gold.src} alt="" />
+                  </AspectRatio>
+                </Box>
+                <Box opacity={0} pos={"absolute"} className={styles[`gold3`]}>
+                  <AspectRatio ratio={68/95} w={{base: 36, lg: 68, xl: 68}}>
+                    <Image src={Gold.src} alt="" />
+                  </AspectRatio>
+                </Box>
+              </Box>
             </Flex>
             <Title
               fw={400}
-              fz={{  base: 53, lg: 150 }}
+              fz={{  base: 53, lg: 100, xl: 150 }}
               lts={{base: -5, lg: -11}}
               lh={"100%"}
               style={{
@@ -72,18 +93,35 @@ function Hero() {
             </Title>
             <Flex justify={"center"} align={"center"} gap={10}>
               <Box
-                w={{ lg: 180 }}
-                h={{ lg: 68 }}
+                w={{ base: 119, xl: 180 }}
+                h={{ base: 44, xl: 68 }}
                 bg={"linear-gradient( #000000, #303030aa)"}
                 style={{
                   borderRadius: 100,
-                  border: "2px solid #C0C0C088",
+                  border: "1px solid #C0C0C088",
                 }}
-              ></Box>
+                pos={"relative"}
+              >
+                <Box opacity={0} pos={"absolute"} className={styles[`sec`]}>
+                  <AspectRatio ratio={64/78} w={{base: 32, lg: 42, xl: 64}}>
+                    <Image src={SECLogo.src} alt="" />
+                  </AspectRatio>
+                </Box>
+                <Box opacity={0} pos={"absolute"} className={styles[`sec2`]}>
+                  <AspectRatio ratio={64/78} w={{base: 32, lg: 42, xl: 64}}>
+                    <Image src={SECLogo.src} alt="" />
+                  </AspectRatio>
+                </Box>
+                <Box opacity={0} pos={"absolute"} className={styles[`sec3`]}>
+                  <AspectRatio ratio={64/78} w={{base: 32, lg: 42, xl: 64}}>
+                    <Image src={SECLogo.src} alt="" />
+                  </AspectRatio>
+                </Box>
+              </Box>
               <Text
                 lh={"100%"}
                 lts={{base: -2, lg: -6}}
-                fz={{  base: 53, lg: 110 }}
+                fz={{ base: 53, lg: 73, xl: 110 }}
                 style={{
                   background: "radial-gradient(#ffffff 60%, #000000 100%)",
                   color: "transparent",
