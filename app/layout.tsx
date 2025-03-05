@@ -1,5 +1,5 @@
 import "@mantine/core/styles.css";
-import React from "react";
+import React, { useEffect } from "react";
 import {
   MantineProvider,
   ColorSchemeScript,

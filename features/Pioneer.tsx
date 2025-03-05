@@ -44,7 +44,7 @@ function Pioneer() {
           px={{ base: 16, lg: 119, xl: 145 }}
           py={{ base: 60, lg: 105, xl: 140 }}
         >
-          <Box w={{ base: "100%", lg: "50%" }}>
+          <Box w={{ base: "100%", lg: "50%" }} data-aos={"fade-up"}>
             <Text c={"#fff"} lh={"100%"} fz={{ base: 40, xl: 80 }} fw={500}>
               WE ARE
             </Text>
@@ -104,6 +104,7 @@ function Pioneer() {
           w={{ base: "120%", lg: "100%" }}
         >
           <BackgroundImage
+            data-aos={"zoom-in"}
             src={isMobile ? CommunityMobileBG.src : CommunityBG.src}
             pos={"relative"}
           >

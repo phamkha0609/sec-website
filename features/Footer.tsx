@@ -13,7 +13,7 @@ function Footer() {
     }} bg={"#070707"}>
       <AspectRatio ratio={1920/1158} >
         <BackgroundImage src={FooterBG.src} bgsz={"cover"}>
-          <Container fluid pt={{base: 205, lg: 154, xl: 420}} px={{base: 16, lg: 106, xl: 160}}>
+          <Container fluid pt={{base: 405, lg: 154, xl: 420}} px={{base: 16, lg: 106, xl: 160}}>
             <Flex
                 direction={{ base: "column", lg: "row" }}
                 align={"center"}
@@ -65,7 +65,7 @@ function Footer() {
           <Flex wrap={"wrap"} align={"center"} py={{base: 16, xl: 24}} px={{base: 16, lg: 106, xl: 160}} justify={"space-between"}>
             <Text w={{base: "50%", lg: "40%"}} c={"#1F2937"} fz={{base: 14, xl: 22}}>© 2024 Copyright By SEC</Text>
 
-            <Flex w={{base: "50%", lg: "20%"}} gap={"md"}>
+            <Flex w={{base: "50%", lg: "20%"}} gap={"md"} justify={{base: "flex-end", lg: "center"}}>
               <AspectRatio ratio={40/49} w={{base: 27, xl: 40}}>
                   <Image src={SECLogo.src} alt='' />
               </AspectRatio>

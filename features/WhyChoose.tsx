@@ -103,7 +103,7 @@ function WhyChoose() {
         direction={{ base: "column", lg: "row" }}
       >
         {data.map((e, i) => (
-          <Flex key={i} direction={{ base: "column", xl: "row" }}>
+          <Flex key={i} direction={{ base: "column", xl: "row" }} data-aos={"fade-up"}>
             <FeatureItem {...e} />
             {i !== data.length - 1 && (
               <Divider

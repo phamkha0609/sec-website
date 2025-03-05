@@ -20,6 +20,7 @@ import HeroLeft from "./HeroLeft.png";
 import HeroRight from "./HeroRight.png";
 import ComingSoonBG from "./ComingSoonBG.png";
 import ComingSoonMobileBG from "./ComingSoonMobileBG.png";
+import PaperBG from "./PaperBG.png";
 
 export {
   HeroBG,
@@ -43,5 +44,6 @@ export {
   HeroLeft,
   HeroRight,
   ComingSoonBG,
-  ComingSoonMobileBG
+  ComingSoonMobileBG,
+  PaperBG
 };

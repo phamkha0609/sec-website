@@ -29,10 +29,10 @@ import styles from "./hero.module.css"
 function Hero() {
   return (
     <BackgroundImage src={HeroBG.src} pos={"relative"}>
-      <AspectRatio visibleFrom="lg" ratio={155/65} w={{base: 0, lg: 103, xl: 155}} pos={"absolute"} left={"15%"} top={"35%"}>
+      <AspectRatio visibleFrom="lg" ratio={155/65} w={{base: 0, lg: 103, xl: 155}} pos={"absolute"} left={"15%"} top={"35%"} data-aos={"zoom-in-up"}>
         <Image src={HeroLeft.src} alt="" />
       </AspectRatio>
-      <AspectRatio visibleFrom="lg" ratio={140/71} w={{base: 0, lg: 103, xl: 155}} pos={"absolute"} right={"15%"} top={"25%"}>
+      <AspectRatio visibleFrom="lg" ratio={140/71} w={{base: 0, lg: 103, xl: 155}} pos={"absolute"} right={"15%"} top={"25%"} data-aos={"zoom-in-down"}>
         <Image src={HeroRight.src} alt="" />
       </AspectRatio>
       <Container mih={"100vh"}>
@@ -160,6 +160,7 @@ function Hero() {
                   transform: "rotateY(-15deg) scale(0.9) translateX(120px)",
                   transformOrigin: "center left",
                 }}
+                data-aos={"fade-up"}
               />
               <BalaceItem />
               <SwapItem />
@@ -175,6 +176,7 @@ function Hero() {
                   transform: "rotateY(15deg) scale(0.985) translateX(-5px)",
                   transformOrigin: "center left",
                 }}
+                data-aos={"fade-up"}
               />
             </Flex>
           </Box>
@@ -196,7 +198,7 @@ const itemStyle: BoxProps = {
 };
 
 const BalaceItem = () => (
-  <Box {...itemStyle}>
+  <Box {...itemStyle} data-aos={"slide-up"}>
     <Text c={"#ffffffcc"} ta={"center"} fz={{ lg: 18 }}>
       Online Silver Exchange
     </Text>
@@ -305,7 +307,7 @@ const BalaceItem = () => (
   </Box>
 );
 const SwapItem = () => (
-  <Box {...itemStyle}>
+  <Box {...itemStyle} data-aos={"slide-up"}>
     <Text c={"#ffffffcc"} ta={"center"} fz={{ lg: 18 }}>
       Silver Swap
     </Text>
@@ -316,7 +318,7 @@ const SwapItem = () => (
   </Box>
 );
 const ChartItem = () => (
-  <Box {...itemStyle}>
+  <Box {...itemStyle} data-aos={"slide-up"}>
     <Text c={"#ffffffcc"} fz={{ lg: 18 }}>
       Statistic
     </Text>

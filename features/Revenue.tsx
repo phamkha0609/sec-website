@@ -13,7 +13,7 @@ import {
   Title,
 } from "@mantine/core";
 import React from "react";
-import { RevenueImg } from "../assets/imgs";
+import { PaperBG, RevenueImg } from "../assets/imgs";
 import ArrowUpRight from "../assets/vectors/ArrowUpRight";
 import TransactionIcon from "../assets/vectors/TransactionIcon";
 import TokenFee from "../assets/vectors/TokenFee";
@@ -101,13 +101,14 @@ function Revenue() {
           h={{ base: "auto", lg: 192, xl: 288 }}
         >
           <AspectRatio ratio={698 / 617} w={"100%"}>
-            <BackgroundImage src={RevenueImg.src} pos={"relative"}>
+            <BackgroundImage src={RevenueImg.src} pos={"relative"} data-aos={"fade-in"}>
               <Box pos={"absolute"} right={"5%"} bottom={"5%"}>
                 <ActionIcon
                   color="#FC5A40"
                   w={{ base: 82, lg: 106, xl: 160 }}
                   h={{ base: 82, lg: 106, xl: 160 }}
                   radius={100}
+                  data-aos={"zoom-in"}
                 >
                   <AspectRatio ratio={1} w={{ base: 32, lg: 45, xl: 90 }}>
                     <ArrowUpRight />
@@ -133,32 +134,36 @@ type RevenueItemProps = (typeof revenueData)[0];
 const RevenueItem = ({ Icon, title }: RevenueItemProps) => {
   const { ref, hovered } = useHover();
   return (
-    <Paper
-      radius={10}
-      w={{ base: "33.33%", lg: 186, xl: 280 }}
-      py={{ base: 42, lg: 64 }}
-      ref={ref}
-      style={{
-        cursor: "pointer",
-      }}
-      bg={hovered ? "#F5F5F5" : "#fff"}
-    >
-      <Flex direction={"column"} align={"center"}>
-        <AspectRatio ratio={1} w={{ base: 32, lg: 45, xl: 68 }}>
-          <Icon color={hovered ? "#000" : "#6B728088"} />
-        </AspectRatio>
+    <BackgroundImage w={{ base: "33.33%", lg: 186, xl: 280 }} src={PaperBG.src} bgsz={"cover"} style={{
+      borderRadius: 10
+    }} data-aos={"fade-left"}>
+      <Paper
+        w={"100%"}
+        h={"100%"}
+        py={{ base: 42, lg: 64 }}
+        ref={ref}
+        style={{
+          cursor: "pointer",
+        }}
+        bg={hovered ? "transparent" : "#fff"}
+      >
+        <Flex direction={"column"} align={"center"}>
+          <AspectRatio ratio={1} w={{ base: 32, lg: 45, xl: 68 }}>
+            <Icon color={hovered ? "#000" : "#6B728088"} />
+          </AspectRatio>
 
-        <Text
-          fw={500}
-          fz={{ base: 12, lg: 20 }}
-          mt={{ base: 16, lg: 32 }}
-          ta={"center"}
-          c={hovered ? "#000" : "#6B728088"}
-        >
-          {title}
-        </Text>
-      </Flex>
-    </Paper>
+          <Text
+            fw={500}
+            fz={{ base: 12, lg: 20 }}
+            mt={{ base: 16, lg: 32 }}
+            ta={"center"}
+            c={hovered ? "#000" : "#6B728088"}
+          >
+            {title}
+          </Text>
+        </Flex>
+      </Paper>
+    </BackgroundImage>
   );
 };
 
