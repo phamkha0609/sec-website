@@ -18,6 +18,8 @@ import FooterBG from "./FooterBG.png";
 import Gold from "./Gold.png";
 import HeroLeft from "./HeroLeft.png";
 import HeroRight from "./HeroRight.png";
+import ComingSoonBG from "./ComingSoonBG.png";
+import ComingSoonMobileBG from "./ComingSoonMobileBG.png";
 
 export {
   HeroBG,
@@ -39,5 +41,7 @@ export {
   FooterBG,
   Gold,
   HeroLeft,
-  HeroRight
+  HeroRight,
+  ComingSoonBG,
+  ComingSoonMobileBG
 };
