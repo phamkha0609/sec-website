@@ -16,6 +16,8 @@ import CommunityMobileBG from "./CommunityMobileBG.png";
 import DiscoverButton from "./DiscoverButton.png";
 import FooterBG from "./FooterBG.png";
 import Gold from "./Gold.png";
+import HeroLeft from "./HeroLeft.png";
+import HeroRight from "./HeroRight.png";
 
 export {
   HeroBG,
@@ -35,5 +37,7 @@ export {
   CommunityMobileBG,
   DiscoverButton,
   FooterBG,
-  Gold
+  Gold,
+  HeroLeft,
+  HeroRight
 };

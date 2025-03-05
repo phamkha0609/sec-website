@@ -16,7 +16,7 @@ import {
   Title,
 } from "@mantine/core";
 import React from "react";
-import { Gold, HeroBG, HeroChart, SECLogo } from "../assets/imgs";
+import { Gold, HeroBG, HeroChart, HeroLeft, HeroRight, SECLogo } from "../assets/imgs";
 import ArrowUp from "../assets/vectors/ArrowUp";
 import ArrowDown from "../assets/vectors/ArrowDown";
 import UpTrend from "../assets/vectors/UpTrend";
@@ -28,7 +28,13 @@ import styles from "./hero.module.css"
 
 function Hero() {
   return (
-    <BackgroundImage src={HeroBG.src}>
+    <BackgroundImage src={HeroBG.src} pos={"relative"}>
+      <AspectRatio visibleFrom="lg" ratio={155/65} w={{base: 0, lg: 103, xl: 155}} pos={"absolute"} left={"15%"} top={"35%"}>
+        <Image src={HeroLeft.src} alt="" />
+      </AspectRatio>
+      <AspectRatio visibleFrom="lg" ratio={140/71} w={{base: 0, lg: 103, xl: 155}} pos={"absolute"} right={"15%"} top={"25%"}>
+        <Image src={HeroRight.src} alt="" />
+      </AspectRatio>
       <Container mih={"100vh"}>
         <Center mih={"90vh"} pt={{base: 105, lg: 168, xl: 182}}>
           <Box>
