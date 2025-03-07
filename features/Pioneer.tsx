@@ -102,6 +102,7 @@ function Pioneer() {
         <AspectRatio
           ratio={isMobile ? 390 / 377 : 1920 / 1067}
           w={{ base: "120%", lg: "100%" }}
+          id="ecosystem"
         >
           <BackgroundImage
             data-aos={"zoom-in"}

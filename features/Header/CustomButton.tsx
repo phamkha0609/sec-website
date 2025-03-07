@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import { Button, Text } from "@mantine/core";
 import { useRouter } from "next/navigation";
 import React from "react";
@@ -6,7 +6,7 @@ import React from "react";
 function CustomButton() {
   const router = useRouter();
   const handleClick = () => {
-    router.push("/coming-soon");
+    router.push("/app");
   };
   return (
     <Button

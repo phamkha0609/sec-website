@@ -14,7 +14,7 @@ import { AboutBG, BackedImg, CardCollect, GatewayImg } from "../assets/imgs";
 
 function About() {
   return (
-    <Box bg={"#000000"} pos={"relative"}>
+    <Box bg={"#000000"} pos={"relative"} id="about">
       <Box
         pos={"absolute"}
         left={{ base: "5%", lg: "20%", xl: "15%" }}

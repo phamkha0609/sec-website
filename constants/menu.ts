@@ -117,22 +117,22 @@ export const policiesMenu = [
 export const headerMenu = [
     {
         title: "Home",
-        link: ""
+        link: "/"
     },
     {
         title: "About Us",
-        link: ""
+        link: "#about"
     },
     {
         title: "Revenue",
-        link: ""
+        link: "#revenue"
     },
     {
         title: "Ecosystem",
-        link: ""
+        link: "#ecosystem"
     },
     {
         title: "Blog",
-        link: ""
+        link: "/app"
     }
 ]
