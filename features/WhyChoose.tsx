@@ -64,8 +64,8 @@ function WhyChoose() {
     <Container
       fluid
       mt={{base: 90}}
-      py={{ base: 60, lg: 120, xl: 180 }}
-      px={{ lg: 100, xl: 160 }}
+      py={{ base: 60, lg: 100, xl: 180 }}
+      px={{ lg: 100, xl: 120 }}
     >
       <Flex
         direction={{ base: "column", lg: "row" }}
@@ -109,7 +109,7 @@ function WhyChoose() {
             {i !== data.length - 1 && (
               <Divider
                 visibleFrom="xl"
-                ml={52}
+                ml={{base: 52, xl: 30}}
                 orientation={"vertical"}
                 variant={"dashed"}
                 h={"75%"}
