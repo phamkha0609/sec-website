@@ -1,0 +1,31 @@
+name: Sync Fork
+
+on:
+  schedule:
+    - cron: '5 * * * *'  
+  workflow_dispatch: # Cho phép chạy thủ công từ GitHub Actions
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Fork
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+
+      - name: Add Upstream Remote
+        run: |
+          git remote add upstream https://github.com/phamkha0609/sec-website.git
+          git fetch upstream
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Merge Upstream Changes
+        run: |
+          git checkout main
+          git merge --no-edit upstream/main || true
+
+      - name: Push Changes
+        run: |
+          git push origin main || true
