@@ -17,8 +17,8 @@ function About() {
     <Box bg={"#000000"} pos={"relative"}>
       <Box
         pos={"absolute"}
-        left={{ base: "5%", lg: "20%", xl: "20%" }}
-        top={{ base: "55%", xl: "50%" }}
+        left={{ base: "5%", lg: "20%", xl: "15%" }}
+        top={{ base: "55%", lg : "50%" ,xl: "70%" }}
       >
         <AspectRatio ratio={368 / 208} w={{ base: 154, lg: 245, xl: 368 }} data-aos={"fade-right"}>
           <Image src={BackedImg.src} alt="" />
