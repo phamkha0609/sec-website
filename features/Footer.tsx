@@ -50,7 +50,7 @@ function Footer() {
                       <Text c={"#1F2937"} fz={{base: 20, xl: 32}}>About Us</Text>
 
                       <Text mt={{base: 22, xl: 33}} c={"#1F2937"} fz={{base: 12, xl: 16}}>
-                        SEC (Silver Exchange Company) was born with the mission to revolutionize silver investment in Vietnam, bringing a pioneering digitized silver solution, applying blockchain technology to solve existing problems of the traditional silver market.
+                        SEC (Silver Exchange Center) was born with the mission to revolutionize silver investment in Vietnam, bringing a pioneering digitized silver solution, applying blockchain technology to solve existing problems of the traditional silver market.
                       </Text>
                     </Box>
                   </Box>

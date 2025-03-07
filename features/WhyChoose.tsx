@@ -63,6 +63,7 @@ function WhyChoose() {
   return (
     <Container
       fluid
+      mt={{base: 90}}
       py={{ base: 60, lg: 120, xl: 180 }}
       px={{ lg: 100, xl: 160 }}
     >
