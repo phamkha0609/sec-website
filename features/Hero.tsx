@@ -28,7 +28,7 @@ import styles from "./hero.module.css"
 
 function Hero() {
   return (
-    <BackgroundImage src={HeroBG.src} pos={"relative"}>
+    <BackgroundImage src={HeroBG.src} pos={"relative"} id="firtSection">
       <AspectRatio visibleFrom="lg" ratio={155/65} w={{base: 0, lg: 103, xl: 155}} pos={"absolute"} left={"15%"} top={"35%"} data-aos={"zoom-in-up"}>
         <Image src={HeroLeft.src} alt="" />
       </AspectRatio>

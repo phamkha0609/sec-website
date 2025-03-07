@@ -21,12 +21,13 @@ export default function HomePage() {
     <Box
       style={{
         overflowX: "hidden",
+        scrollBehavior: "smooth"
       }}
       pos={"relative"}
     >
       <Navbar />
       <Hero />
-      <About />
+      <About/>
       <WhyChoose />
       <Revenue />
       <Investors />
