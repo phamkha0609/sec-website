@@ -6,7 +6,7 @@ import React from "react";
 function CustomButton() {
   const router = useRouter();
   const handleClick = () => {
-    router.push("/app");
+    router.push(process.env.NEXT_PUBLIC_ACCESS_APP_URL || "app");
   };
   return (
     <Button
