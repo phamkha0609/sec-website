@@ -10,7 +10,7 @@ import {
   Title,
 } from "@mantine/core";
 import React from "react";
-import { FooterBG, SECLogo } from "../assets/imgs";
+import { LogoVectorDark } from "../assets/imgs";
 import ArrowUpRight from "../assets/vectors/ArrowUpRight";
 import SocialMenu from "../components/Footer/SocialMenu";
 import CategoryMenu from "../components/Footer/CategoryMenu";
@@ -126,9 +126,10 @@ function Footer() {
             w={{ base: "50%", lg: "20%" }}
             gap={"md"}
             justify={{ base: "flex-end", lg: "center" }}
+            align={"center"}
           >
-            <AspectRatio ratio={40 / 49} w={{ base: 27, xl: 40 }}>
-              <Image src={SECLogo.src} alt="" />
+            <AspectRatio ratio={1} w={{ base: 27, xl: 40 }}>
+              <Image src={LogoVectorDark.src} alt="" />
             </AspectRatio>
 
             <Text c={"#1f2937"} fw={500} fz={{ base: 20, xl: 32 }}>

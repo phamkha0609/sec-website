@@ -23,6 +23,7 @@ import ComingSoonMobileBG from "./ComingSoonMobileBG.png";
 import PaperBG from "./PaperBG.png";
 import CircleAbstract from "./CircleAbstract.png";
 import HomeIcon from "./HomeIcon.png";
+import LogoVectorDark from "./LogoVectorDark.png";
 
 export {
   HeroBG,
@@ -49,5 +50,6 @@ export {
   ComingSoonMobileBG,
   PaperBG,
   CircleAbstract,
-  HomeIcon
+  HomeIcon,
+  LogoVectorDark
 };

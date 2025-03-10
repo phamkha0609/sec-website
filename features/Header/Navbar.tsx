@@ -35,7 +35,7 @@ function Navbar() {
       align={"center"}
       justify={"space-between"}
       px={{ base: 16, lg: 52, xl: 80 }}
-      py={{ base: 20, lg: 16, xl: 24 }}
+      py={{ base: 10, lg: 8, xl: 12 }}
       bg={scrolled ? "#0B0B0B" : "transparent"}
     >
       <Flex gap={{ base: 8, xl: 12 }} align={"center"}>

@@ -6,6 +6,10 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { HomeIcon } from "../../assets/imgs";
 
+type MenuProps = {
+  toggle?: () => void;
+};
+
 function smoothScrollTo(targetY: number, duration: number = 3000) {
   const startY = window.scrollY;
   const startTime = performance.now();
@@ -28,7 +32,7 @@ function smoothScrollTo(targetY: number, duration: number = 3000) {
   requestAnimationFrame(step);
 }
 
-function Menu() {
+function Menu({ toggle }: MenuProps) {
   const router = useRouter();
   const [currentActive, setCurrentActive] = useState("/");
 
@@ -50,6 +54,9 @@ function Menu() {
     }
 
     setCurrentActive(link);
+    if (toggle) {
+      toggle();
+    }
   };
   return (
     <Flex direction={{ base: "column", lg: "row" }}>
@@ -59,7 +66,7 @@ function Menu() {
           justify={"center"}
           miw={125}
           key={i}
-          gap={currentActive === e.link ? 14 : 0}
+          gap={currentActive === e.link ? { base: 8, lg: 14 } : 0}
           bg={
             currentActive === e.link
               ? "linear-gradient(90deg, #090909, #161616)"

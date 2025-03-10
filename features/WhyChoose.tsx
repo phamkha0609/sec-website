@@ -63,7 +63,7 @@ function WhyChoose() {
   return (
     <Container
       fluid
-      mt={{base: 90}}
+      mt={{ base: 90 }}
       py={{ base: 60, lg: 100, xl: 180 }}
       px={{ lg: 100, xl: 120 }}
     >
@@ -104,12 +104,17 @@ function WhyChoose() {
         direction={{ base: "column", lg: "row" }}
       >
         {data.map((e, i) => (
-          <Flex key={i} direction={{ base: "column", xl: "row" }} data-aos={"fade-up"}>
+          <Flex
+            key={i}
+            direction={{ base: "column", xl: "row" }}
+            data-aos={"fade-up"}
+            w={{ xl: "25%" }}
+          >
             <FeatureItem {...e} />
             {i !== data.length - 1 && (
               <Divider
                 visibleFrom="xl"
-                ml={{base: 52, xl: 30}}
+                ml={{ base: 52, xl: 30 }}
                 orientation={"vertical"}
                 variant={"dashed"}
                 h={"75%"}
@@ -128,7 +133,7 @@ function WhyChoose() {
 type FeatureItemProps = (typeof data)[0];
 
 const FeatureItem = ({ icon, subTitle, title, content }: FeatureItemProps) => (
-  <Box w={{ base: "100%", lg: 220, xl: 280 }}>
+  <Box w={{ base: "100%", lg: 220, xl: "80%" }}>
     <Flex
       align={"center"}
       gap={10}
@@ -141,7 +146,7 @@ const FeatureItem = ({ icon, subTitle, title, content }: FeatureItemProps) => (
       w={"fit-content"}
     >
       <Box mb={-6}>{icon}</Box>
-      <Text fw={500} lh={"100%"} c={"#fe8833"} fz={{ base: 11, xl: 16, }}>
+      <Text fw={500} lh={"100%"} c={"#fe8833"} fz={{ base: 11, xl: 16 }}>
         {subTitle}
       </Text>
     </Flex>
@@ -155,7 +160,13 @@ const FeatureItem = ({ icon, subTitle, title, content }: FeatureItemProps) => (
       {title}
     </Text>
 
-    <Text  fw={500} lh={"150%"} c={"#6b7280"} mt={{ base: 21, lg: 32 }} fz={{ base: 11, lg: 16 }}>
+    <Text
+      fw={500}
+      lh={"150%"}
+      c={"#6b7280"}
+      mt={{ base: 21, lg: 32 }}
+      fz={{ base: 11, lg: 16 }}
+    >
       {content}
     </Text>
   </Box>

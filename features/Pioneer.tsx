@@ -107,19 +107,19 @@ function Pioneer() {
         </Flex>
 
         <AspectRatio
-          ratio={isMobile ? 390 / 377 : 3840 / 2346}
+          ratio={isMobile ? 390 / 589 : 3840 / 2346}
           w={{ base: "120%", lg: "100%" }}
           id="ecosystem"
         >
           <BackgroundImage
-            data-aos={"zoom-in"}
+            data-aos={"fade-up"}
             src={isMobile ? CommunityMobileBG.src : CommunityBG.src}
             pos={"relative"}
           >
             <Center
               pos={"absolute"}
               w={"100%"}
-              bottom={{ base: "5%", xl: 280 }}
+              bottom={{ base: "25%", xl: 280 }}
             >
               <Box>
                 <Text
