@@ -14,6 +14,7 @@ import {
 import { useMediaQuery } from "@mantine/hooks";
 import React from "react";
 import {
+  CircleAbstract,
   CommunityBG,
   CommunityMobileBG,
   DiscoverButton,
@@ -27,10 +28,16 @@ function Pioneer() {
   const isMobile = useMediaQuery("(max-width: 801px)");
   const isTablet = useMediaQuery("(min-width: 801px)");
   return (
-    <Box>
+    <Box
+      pos={"relative"}
+      style={{
+        zIndex: 5,
+        overflow: "hidden",
+      }}
+    >
       <Box
         mih={"100vh"}
-        bg={"#070707"}
+        bg={"linear-gradient(#070707 96%, #3a1f0d)"}
         style={{
           borderTopLeftRadius: isMobile ? 40 : isTablet ? 52 : 80,
           borderTopRightRadius: isMobile ? 40 : isTablet ? 52 : 80,
@@ -100,7 +107,7 @@ function Pioneer() {
         </Flex>
 
         <AspectRatio
-          ratio={isMobile ? 390 / 377 : 1920 / 1067}
+          ratio={isMobile ? 390 / 377 : 3840 / 2346}
           w={{ base: "120%", lg: "100%" }}
           id="ecosystem"
         >
@@ -109,7 +116,11 @@ function Pioneer() {
             src={isMobile ? CommunityMobileBG.src : CommunityBG.src}
             pos={"relative"}
           >
-            <Center pos={"absolute"} w={"100%"} bottom={"5%"}>
+            <Center
+              pos={"absolute"}
+              w={"100%"}
+              bottom={{ base: "5%", xl: 280 }}
+            >
               <Box>
                 <Text
                   fw={500}

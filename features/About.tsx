@@ -77,10 +77,10 @@ function About() {
                   <Image src={GatewayImg.src} alt="" />
                 </AspectRatio>
                 <Box mx={"auto"} w={"fit-content"} mt={{ base: 20, lg: 40 }}>
-                  <Text fw={500} fz={14} c={"#1f2937"}>
+                  <Text fw={500} fz={{base: 15, xl: 20}} c={"#1f2937"}>
                     Bridging Physical Silver with Digital Innovation
                   </Text>
-                  <Text fz={14} c={"#6B7280"}>
+                  <Text fz={{base: 15, xl: 20}} c={"#6B7280"}>
                     Digital Silver Token backed by Physical Silver
                   </Text>
                 </Box>

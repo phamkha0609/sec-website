@@ -155,7 +155,7 @@ const FeatureItem = ({ icon, subTitle, title, content }: FeatureItemProps) => (
       {title}
     </Text>
 
-    <Text lh={"150%"} c={"#6b7280"} mt={{ base: 21, lg: 32 }} fz={{ base: 11, lg: 16 }}>
+    <Text  fw={500} lh={"150%"} c={"#6b7280"} mt={{ base: 21, lg: 32 }} fz={{ base: 11, lg: 16 }}>
       {content}
     </Text>
   </Box>

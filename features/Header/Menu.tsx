@@ -1,9 +1,10 @@
 "use client";
-import { Flex, Text } from "@mantine/core";
+import { AspectRatio, Box, Flex, Image, Text } from "@mantine/core";
 import React, { useEffect, useState } from "react";
 import { headerMenu } from "../../constants/menu";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { HomeIcon } from "../../assets/imgs";
 
 function smoothScrollTo(targetY: number, duration: number = 3000) {
   const startY = window.scrollY;
@@ -29,6 +30,7 @@ function smoothScrollTo(targetY: number, duration: number = 3000) {
 
 function Menu() {
   const router = useRouter();
+  const [currentActive, setCurrentActive] = useState("/");
 
   const handleClick = (
     e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
@@ -46,29 +48,63 @@ function Menu() {
     } else {
       router.push(link);
     }
+
+    setCurrentActive(link);
   };
   return (
-    <Flex
-      gap={{ base: 28, xl: 42 }}
-      direction={{ base: "column", lg: "row" }}
-    >
+    <Flex direction={{ base: "column", lg: "row" }}>
       {headerMenu.map((e, i) => (
-        <Link
-          href={e.link}
+        <Flex
+          align={"center"}
+          justify={"center"}
+          miw={125}
           key={i}
-          onClick={(event) => handleClick(event, e.link)}
-          style={{
-            textDecoration: "none",
-          }}
+          gap={currentActive === e.link ? 14 : 0}
+          bg={
+            currentActive === e.link
+              ? "linear-gradient(90deg, #090909, #161616)"
+              : "transparent"
+          }
+          py={{ base: 6, lg: 12 }}
+          px={{ base: 8, lg: 16 }}
+          style={
+            currentActive === e.link
+              ? {
+                  borderRadius: 100,
+                  border: "2px solid #262626",
+                  overflow: "hidden",
+                }
+              : {
+                  overflow: "hidden",
+                  transition: "all .5s",
+                  borderRadius: 100,
+                }
+          }
         >
-          <Text
-            c={"#fff"}
-            fz={{ base: 16, xl: 18 }}
-            ta={"center"}
+          {currentActive === e.link && e.link === "/" ? (
+            <AspectRatio ratio={1} w={{ base: 0, lg: 27 }}>
+              <Image src={HomeIcon.src} alt="" />
+            </AspectRatio>
+          ) : (
+            <></>
+          )}
+          <Link
+            href={e.link}
+            onClick={(event) => handleClick(event, e.link)}
+            style={{
+              textDecoration: "none",
+            }}
           >
-            {e.title}
-          </Text>
-        </Link>
+            <Text
+              fw={currentActive === e.link ? 500 : 400}
+              c={"#fff"}
+              fz={{ base: 16, xl: 18 }}
+              ta={"center"}
+            >
+              {e.title}
+            </Text>
+          </Link>
+        </Flex>
       ))}
     </Flex>
   );

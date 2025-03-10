@@ -1,10 +1,10 @@
 "use client";
 import { AspectRatio, Box, Flex, Image, Paper, Text } from "@mantine/core";
 import React, { useEffect, useState } from "react";
-import { SECLogo } from "../../assets/imgs";
 import Menu from "./Menu";
 import CustomButton from "./CustomButton";
 import MobileMenu from "./MobileMenu";
+import LogoVector from "../../assets/vectors/LogoVector";
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -38,13 +38,13 @@ function Navbar() {
       py={{ base: 20, lg: 16, xl: 24 }}
       bg={scrolled ? "#0B0B0B" : "transparent"}
     >
-      <Flex gap={{ base: 8, xl: 12 }}>
+      <Flex gap={{ base: 8, xl: 12 }} align={"center"}>
         <Box>
-          <AspectRatio ratio={40 / 49} w={{ base: 27, xl: 40 }}>
-            <Image src={SECLogo.src} alt="" />
+          <AspectRatio ratio={1} w={{ base: 27, xl: 40 }}>
+            <LogoVector />
           </AspectRatio>
         </Box>
-        <Text c={"#ababab"} fz={{ base: 21, xl: 32 }} fw={500}>
+        <Text c={"#fff"} fz={{ base: 21, xl: 32 }} fw={500}>
           SEC
         </Text>
       </Flex>
@@ -53,8 +53,7 @@ function Navbar() {
         visibleFrom="lg"
         bg={"#0B0B0B"}
         radius={100}
-        px={{ base: 27, xl: 40 }}
-        py={{ base: 16 }}
+        p={{ base: 2, lg: 6 }}
         style={{
           border: "2px solid #262626",
         }}

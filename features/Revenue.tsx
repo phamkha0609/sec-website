@@ -159,6 +159,7 @@ const RevenueItem = ({ Icon, title }: RevenueItemProps) => {
             mt={{ base: 16, lg: 32 }}
             ta={"center"}
             c={hovered ? "#000" : "#6B728088"}
+            maw={167}
           >
             {title}
           </Text>

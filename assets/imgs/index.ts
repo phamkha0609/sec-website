@@ -21,6 +21,8 @@ import HeroRight from "./HeroRight.png";
 import ComingSoonBG from "./ComingSoonBG.png";
 import ComingSoonMobileBG from "./ComingSoonMobileBG.png";
 import PaperBG from "./PaperBG.png";
+import CircleAbstract from "./CircleAbstract.png";
+import HomeIcon from "./HomeIcon.png";
 
 export {
   HeroBG,
@@ -45,5 +47,7 @@ export {
   HeroRight,
   ComingSoonBG,
   ComingSoonMobileBG,
-  PaperBG
+  PaperBG,
+  CircleAbstract,
+  HomeIcon
 };

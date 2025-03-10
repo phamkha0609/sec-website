@@ -85,7 +85,7 @@ function Hero() {
               fw={400}
               fz={{  base: 53, lg: 100, xl: 150 }}
               lts={{base: -5, lg: -11}}
-              lh={"100%"}
+              lh={"90%"}
               style={{
                 background: "radial-gradient(#ffffff 60%, #000000 100%)",
                 color: "transparent",
@@ -199,7 +199,7 @@ const itemStyle: BoxProps = {
 
 const BalaceItem = () => (
   <Box {...itemStyle} data-aos={"slide-up"}>
-    <Text c={"#ffffffcc"} ta={"center"} fz={{ lg: 18 }}>
+    <Text fw={500} c={"#ffffffcc"} ta={"center"} fz={{ lg: 18 }}>
       Online Silver Exchange
     </Text>
 
@@ -210,18 +210,18 @@ const BalaceItem = () => (
       bg={"#ffffff22"}
       mt={{ base: 24, lg: 32 }}
       py={{ base: 2, lg: 4 }}
-      px={{ base: 6, lg: 10 }}
+      px={{ base: 6, lg: 10.33 }}
     >
-      <Text c={"#fff"} fz={{ lg: 15.5 }}>
+      <Text fw={400} lh={"100%"} c={"#fff"} fz={{ lg: 15.5 }}>
         My Balance
       </Text>
     </Paper>
 
     <Flex gap={6} mt={{ base: 6, lg: 10 }} justify={"center"} align={"center"}>
-      <Text fz={{ base: 16, lg: 38 }} c={"#ffffffcc"}>
+      <Text fw={400} lh={"100%"} fz={{ base: 16, lg: 38 }} c={"#ffffffcc"}>
         0.00
       </Text>
-      <Text c={"#ffffffcc"} fz={{ base: 10, lg: 15.5 }}>
+      <Text fw={400} lh={"100%"} c={"#ffffffcc"} fz={{ base: 10, lg: 15.5 }}>
         USD
       </Text>
     </Flex>
@@ -308,7 +308,7 @@ const BalaceItem = () => (
 );
 const SwapItem = () => (
   <Box {...itemStyle} data-aos={"slide-up"} data-aos-delay={100}>
-    <Text c={"#ffffffcc"} ta={"center"} fz={{ lg: 18 }}>
+    <Text fw={500} c={"#ffffffcc"} ta={"center"} fz={{ lg: 18 }}>
       Silver Swap
     </Text>
 
@@ -319,7 +319,7 @@ const SwapItem = () => (
 );
 const ChartItem = () => (
   <Box {...itemStyle} data-aos={"slide-up"} data-aos-delay={200}>
-    <Text c={"#ffffffcc"} fz={{ lg: 18 }}>
+    <Text fw={500} c={"#ffffffcc"} fz={{ lg: 18 }}>
       Statistic
     </Text>
 
@@ -329,11 +329,11 @@ const ChartItem = () => (
 
     <Flex mt={{ base: 12, lg: 26 }} justify={"space-between"}>
       <Box>
-        <Text fz={{ base: 8, lg: 10 }} c={"#F2F5F7cc"}>
+        <Text fw={400} lh={"120%"} fz={{ base: 8, lg: 10 }} c={"#F2F5F7cc"}>
           Avg monthly spend
         </Text>
         <Flex mt={{ base: 4, lg: 8 }} gap={6} align={"center"}>
-          <Text c={"#F2F5F7cc"} fz={{ lg: 14 }}>
+          <Text fw={500} lh={"100%"} c={"#F2F5F7cc"} fz={{ lg: 14 }}>
             820.00 USD
           </Text>
 
@@ -347,11 +347,11 @@ const ChartItem = () => (
         </Flex>
       </Box>
       <Box>
-        <Text fz={{ base: 8, lg: 10 }} c={"#F2F5F7cc"}>
+        <Text fw={400} lh={"120%"} fz={{ base: 8, lg: 10 }} c={"#F2F5F7cc"}>
           Spent this month
         </Text>
         <Flex mt={{ base: 4, lg: 8 }} gap={6} align={"center"}>
-          <Text c={"#F2F5F7cc"} fz={{ lg: 14 }}>
+          <Text fw={500} lh={"100%"} c={"#F2F5F7cc"} fz={{ lg: 14 }}>
             440.00 USD
           </Text>
 
@@ -373,7 +373,7 @@ const ChartItem = () => (
           textDecorationColor: "#F2F5F7cc",
         }}
       >
-        <Text c={"#F2F5F7cc"}>See Details</Text>
+        <Text c={"#F2F5F7cc"} fz={{base: 11, lg: 14}}>See Details</Text>
       </Link>
     </Box>
   </Box>
