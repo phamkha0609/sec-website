@@ -3,7 +3,7 @@ import { AspectRatio, Box, Flex, Image, Text } from "@mantine/core";
 import React, { useEffect, useState } from "react";
 import { headerMenu } from "../../constants/menu";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { HomeIcon } from "../../assets/imgs";
 
 type MenuProps = {
@@ -34,6 +34,7 @@ function smoothScrollTo(targetY: number, duration: number = 3000) {
 
 function Menu({ toggle }: MenuProps) {
   const router = useRouter();
+  const pathname = usePathname();
   const [currentActive, setCurrentActive] = useState("/");
 
   const handleClick = (
@@ -58,6 +59,11 @@ function Menu({ toggle }: MenuProps) {
       toggle();
     }
   };
+
+  useEffect(() => {
+    setCurrentActive(pathname);
+  }, []);
+
   return (
     <Flex direction={{ base: "column", lg: "row" }}>
       {headerMenu.map((e, i) => (
@@ -88,9 +94,9 @@ function Menu({ toggle }: MenuProps) {
                 }
           }
         >
-          {currentActive === e.link && e.link === "/" ? (
-            <AspectRatio ratio={1} w={{ base: 0, lg: 27 }}>
-              <Image src={HomeIcon.src} alt="" />
+          {currentActive === e.link ? (
+            <AspectRatio ratio={1} w={{ base: 20, lg: 27 }}>
+              <Image src={e.icon.src} alt="" />
             </AspectRatio>
           ) : (
             <></>

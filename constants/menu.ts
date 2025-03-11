@@ -1,3 +1,5 @@
+import { AboutIcon, BlogIcon, EcosystemIcon, HomeIcon, RevenueIcon } from "../assets/imgs";
+
 export const socialsMenu = [
   {
     title: "Instagram",
@@ -118,21 +120,26 @@ export const headerMenu = [
   {
     title: "Home",
     link: "/",
+    icon: HomeIcon
   },
   {
     title: "About Us",
     link: "#about",
+    icon: AboutIcon
   },
   {
     title: "Revenue",
     link: "#revenue",
+    icon: RevenueIcon
   },
   {
     title: "Ecosystem",
     link: "#ecosystem",
+    icon: EcosystemIcon
   },
   {
     title: "Blog",
     link: "/app",
+    icon: BlogIcon
   },
 ];
