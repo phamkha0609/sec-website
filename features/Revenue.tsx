@@ -95,14 +95,16 @@ function Revenue() {
         mt={{ base: 40, lg: 52, xl: 80 }}
         direction={{ base: "column", lg: "row" }}
         justify={"space-between"}
+        align={"center"}
         gap={24}
       >
-        <Box
-          w={{ base: "100%", lg: 465, xl: 689 }}
-          h={{ base: "auto", lg: 192, xl: 288 }}
-        >
+        <Box w={"100%"} maw={{ base: "100%", lg: 465, xl: 698 }}>
           <AspectRatio ratio={698 / 617} w={"100%"}>
-            <BackgroundImage src={RevenueImg.src} pos={"relative"} data-aos={"fade-in"}>
+            <BackgroundImage
+              src={RevenueImg.src}
+              pos={"relative"}
+              data-aos={"fade-in"}
+            >
               <Box pos={"absolute"} right={"5%"} bottom={"5%"}>
                 <ActionIcon
                   color="#FC5A40"
@@ -120,7 +122,7 @@ function Revenue() {
           </AspectRatio>
         </Box>
 
-        <Flex wrap={"wrap"} w={{ base: "100%", lg: 560, xl: 841 }}>
+        <Flex wrap={"wrap"} w={"100%"} maw={840}>
           {revenueData.map((e, i) => (
             <RevenueItem key={i} {...e} />
           ))}
@@ -135,9 +137,16 @@ type RevenueItemProps = (typeof revenueData)[0];
 const RevenueItem = ({ Icon, title }: RevenueItemProps) => {
   const { ref, hovered } = useHover();
   return (
-    <BackgroundImage w={{ base: "33.33%", lg: 186, xl: 280 }} src={PaperBG.src} bgsz={"cover"} style={{
-      borderRadius: 10
-    }} data-aos={"fade-left"}>
+    <BackgroundImage
+      w={{ base: "33.33%" }}
+      maw={280}
+      src={PaperBG.src}
+      bgsz={"cover"}
+      style={{
+        borderRadius: 10,
+      }}
+      data-aos={"fade-left"}
+    >
       <Paper
         w={"100%"}
         h={"100%"}

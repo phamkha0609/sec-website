@@ -22,7 +22,7 @@ function MobileMenu() {
           <div style={styles}>
             <Box
               px={16}
-              py={20}
+              py={10}
               pos={"absolute"}
               top={0}
               left={0}

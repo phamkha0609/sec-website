@@ -26,7 +26,7 @@ function Investors() {
       </Title>
 
       <Box mt={{ base: 40, lg: 60 }}>
-        <Marquee loop={1} autoFill>
+        <Marquee loop={0} autoFill>
           <Flex align={"center"}>
             <AspectRatio ratio={210 / 59} w={{ base: 120, lg: 140, xl: 210 }}>
               <Image src={QoutientImg.src} alt="" />
