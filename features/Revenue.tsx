@@ -82,10 +82,8 @@ function Revenue() {
             fw={500}
             fz={{ base: 14, xl: 20 }}
           >
-            <span style={{ color: "#1f2937" }}>
-              Silver Exchange Center (SEC)
-            </span>{" "}
-            is designed to create a complete silver trading ecosystem, combining
+            <b style={{ color: "#1f2937" }}>Silver Exchange Center (SEC)</b> is
+            designed to create a complete silver trading ecosystem, combining
             physical silver and tokenized silver through blockchain technology.
           </Text>
         </Box>

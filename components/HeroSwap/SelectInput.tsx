@@ -71,6 +71,7 @@ function SelectInput({
               variant={"unstyled"}
               placeholder="0.00"
               type={"number"}
+              fw={500}
               styles={{
                 input: {
                   color: "#ffffffcc",
@@ -92,7 +93,7 @@ function SelectInput({
                 </AspectRatio>
               }
             >
-              <Text c={"#ffffffcc"} fz={{ base: 10, lg: 16 }}>
+              <Text c={"#ffffffcc"} fz={{ base: 10, lg: 12, xl: 16 }} fw={400}>
                 {coinData ? coinData.symbol : "Select"}
               </Text>
             </Button>

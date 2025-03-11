@@ -114,7 +114,7 @@ function WhyChoose() {
             {i !== data.length - 1 && (
               <Divider
                 visibleFrom="xl"
-                ml={{ base: 52, xl: 30 }}
+                mx={{ base: 60, lg: 75 }}
                 orientation={"vertical"}
                 variant={"dashed"}
                 h={"75%"}

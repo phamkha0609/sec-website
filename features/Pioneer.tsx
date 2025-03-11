@@ -66,11 +66,9 @@ function Pioneer() {
               fw={400}
               fz={{ base: 14, xl: 20 }}
             >
-              <span style={{ color: "#fff" }}>
-                Silver Exchange Center (SEC)
-              </span>{" "}
-              is designed to create a complete silver trading ecosystem,
-              combining physical silver and tokenized silver through blockchain
+              <b style={{ color: "#fff" }}>Silver Exchange Center (SEC)</b> is
+              designed to create a complete silver trading ecosystem, combining
+              physical silver and tokenized silver through blockchain
               technology.
             </Text>
 

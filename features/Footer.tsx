@@ -38,7 +38,6 @@ function Footer() {
                 tt={"uppercase"}
                 lh={"100%"}
                 fz={{ base: 40, xl: 80 }}
-                fw={400}
                 c={"#1F2937"}
               >
                 Let’s Talk
