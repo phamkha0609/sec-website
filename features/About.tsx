@@ -18,9 +18,16 @@ function About() {
       <Box
         pos={"absolute"}
         left={{ base: "5%", lg: "20%", xl: "15%" }}
-        top={{ base: "55%", lg : "50%" ,xl: "70%" }}
+        top={{ base: "55%", lg: "50%", xl: "70%" }}
+        style={{
+          zIndex: 2,
+        }}
       >
-        <AspectRatio ratio={368 / 208} w={{ base: 154, lg: 245, xl: 368 }} data-aos={"fade-right"}>
+        <AspectRatio
+          ratio={368 / 208}
+          w={{ base: 154, lg: 245, xl: 368 }}
+          data-aos={"fade-right"}
+        >
           <Image src={BackedImg.src} alt="" />
         </AspectRatio>
       </Box>
@@ -29,7 +36,11 @@ function About() {
         right={{ base: "5%", lg: "5%", xl: "5%" }}
         bottom={{ base: "5%", lg: "5%", xl: "3%" }}
       >
-        <AspectRatio ratio={279 / 269} w={{ base: 80, lg: 279, xl: 419 }} data-aos={"zoom-in-up"}>
+        <AspectRatio
+          ratio={279 / 269}
+          w={{ base: 80, lg: 279, xl: 419 }}
+          data-aos={"zoom-in-up"}
+        >
           <Image src={CardCollect.src} alt="" />
         </AspectRatio>
       </Box>
@@ -73,14 +84,18 @@ function About() {
 
             <Center>
               <Box>
-                <AspectRatio ratio={503 / 569} w={{ base: "90%", lg: 503 }} data-aos={"fade-up"}>
+                <AspectRatio
+                  ratio={503 / 569}
+                  w={{ base: "90%", lg: 503 }}
+                  data-aos={"fade-up"}
+                >
                   <Image src={GatewayImg.src} alt="" />
                 </AspectRatio>
                 <Box mx={"auto"} w={"fit-content"} mt={{ base: 20, lg: 40 }}>
-                  <Text fw={500} fz={{base: 15, xl: 20}} c={"#1f2937"}>
+                  <Text fw={500} fz={{ base: 15, xl: 20 }} c={"#1f2937"}>
                     Bridging Physical Silver with Digital Innovation
                   </Text>
-                  <Text fz={{base: 15, xl: 20}} c={"#6B7280"}>
+                  <Text fz={{ base: 15, xl: 20 }} c={"#6B7280"}>
                     Digital Silver Token backed by Physical Silver
                   </Text>
                 </Box>
