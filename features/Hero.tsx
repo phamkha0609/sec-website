@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import {
   AspectRatio,
@@ -16,7 +16,14 @@ import {
   Title,
 } from "@mantine/core";
 import React from "react";
-import { Gold, HeroBG, HeroChart, HeroLeft, HeroRight, SECLogo } from "../assets/imgs";
+import {
+  Gold,
+  HeroBG,
+  HeroChart,
+  HeroLeft,
+  HeroRight,
+  SECLogo,
+} from "../assets/imgs";
 import ArrowUp from "../assets/vectors/ArrowUp";
 import ArrowDown from "../assets/vectors/ArrowDown";
 import UpTrend from "../assets/vectors/UpTrend";
@@ -24,24 +31,40 @@ import DownTrend from "../assets/vectors/DownTrend";
 import Link from "next/link";
 import HeroSwap from "../components/HeroSwap";
 
-import styles from "./hero.module.css"
+import styles from "./hero.module.css";
 
 function Hero() {
   return (
     <BackgroundImage src={HeroBG.src} pos={"relative"} id="firtSection">
-      <AspectRatio visibleFrom="lg" ratio={155/65} w={{base: 0, lg: 103, xl: 155}} pos={"absolute"} left={"15%"} top={"35%"} data-aos={"zoom-in-up"}>
+      <AspectRatio
+        visibleFrom="lg"
+        ratio={155 / 65}
+        w={{ base: 0, lg: 103, xl: 155 }}
+        pos={"absolute"}
+        left={"15%"}
+        top={"35%"}
+        data-aos={"zoom-in-up"}
+      >
         <Image src={HeroLeft.src} alt="" />
       </AspectRatio>
-      <AspectRatio visibleFrom="lg" ratio={140/71} w={{base: 0, lg: 103, xl: 155}} pos={"absolute"} right={"15%"} top={"25%"} data-aos={"zoom-in-down"}>
+      <AspectRatio
+        visibleFrom="lg"
+        ratio={140 / 71}
+        w={{ base: 0, lg: 103, xl: 155 }}
+        pos={"absolute"}
+        right={"15%"}
+        top={"25%"}
+        data-aos={"zoom-in-down"}
+      >
         <Image src={HeroRight.src} alt="" />
       </AspectRatio>
       <Container mih={"100vh"}>
-        <Center mih={"90vh"} pt={{base: 105, lg: 168, xl: 182}}>
+        <Center mih={"90vh"} pt={{ base: 105, lg: 168, xl: 182 }}>
           <Box>
             <Flex justify={"center"} align={"center"} gap={10}>
               <Text
                 lh={"100%"}
-                lts={{base: -2, lg: -6}}
+                lts={{ base: -2, lg: -6 }}
                 fz={{ base: 53, lg: 73, xl: 110 }}
                 fw={"500"}
                 style={{
@@ -61,31 +84,44 @@ function Hero() {
                 style={{
                   borderRadius: 100,
                   border: "1px solid #C0C0C088",
+                  clipPath: "inset(-500px 0 0 -500px)",
                 }}
                 pos={"relative"}
               >
                 <Box opacity={0} pos={"absolute"} className={styles[`gold`]}>
-                  <AspectRatio ratio={68/95} w={{base: 36, lg: 68, xl: 68}}>
+                  <AspectRatio ratio={68 / 95} w={{ base: 36, lg: 68, xl: 68 }}>
                     <Image src={Gold.src} alt="" />
                   </AspectRatio>
                 </Box>
                 <Box opacity={0} pos={"absolute"} className={styles[`gold2`]}>
-                  <AspectRatio ratio={68/95} w={{base: 36, lg: 68, xl: 68}}>
+                  <AspectRatio ratio={68 / 95} w={{ base: 36, lg: 68, xl: 68 }}>
                     <Image src={Gold.src} alt="" />
                   </AspectRatio>
                 </Box>
                 <Box opacity={0} pos={"absolute"} className={styles[`gold3`]}>
-                  <AspectRatio ratio={68/95} w={{base: 36, lg: 68, xl: 68}}>
+                  <AspectRatio ratio={68 / 95} w={{ base: 36, lg: 68, xl: 68 }}>
                     <Image src={Gold.src} alt="" />
                   </AspectRatio>
                 </Box>
+                {/* mask */}
+                <Box
+                  w={"100%"}
+                  h={"100%"}
+                  pos={"absolute"}
+                  bottom={-1}
+                  bg={"linear-gradient(#47444200, #111111)"}
+                  style={{
+                    borderRadius: 100,
+                    borderBottom: "1px solid #ffffffcc",
+                  }}
+                />
               </Box>
             </Flex>
             <Title
               fw={400}
-              fz={{  base: 53, lg: 100, xl: 150 }}
-              lts={{base: -5, lg: -11}}
-              lh={"90%"}
+              fz={{ base: 53, lg: 100, xl: 150 }}
+              lts={{ base: -5, lg: -11 }}
+              lh={"100%"}
               style={{
                 background: "radial-gradient(#ffffff 60%, #000000 100%)",
                 color: "transparent",
@@ -105,28 +141,41 @@ function Hero() {
                 style={{
                   borderRadius: 100,
                   border: "1px solid #C0C0C088",
+                  clipPath: "inset(0 0 -500px -500px)",
                 }}
                 pos={"relative"}
               >
                 <Box opacity={0} pos={"absolute"} className={styles[`sec`]}>
-                  <AspectRatio ratio={64/78} w={{base: 32, lg: 42, xl: 64}}>
+                  <AspectRatio ratio={64 / 78} w={{ base: 32, lg: 42, xl: 64 }}>
                     <Image src={SECLogo.src} alt="" />
                   </AspectRatio>
                 </Box>
                 <Box opacity={0} pos={"absolute"} className={styles[`sec2`]}>
-                  <AspectRatio ratio={64/78} w={{base: 32, lg: 42, xl: 64}}>
+                  <AspectRatio ratio={64 / 78} w={{ base: 32, lg: 42, xl: 64 }}>
                     <Image src={SECLogo.src} alt="" />
                   </AspectRatio>
                 </Box>
                 <Box opacity={0} pos={"absolute"} className={styles[`sec3`]}>
-                  <AspectRatio ratio={64/78} w={{base: 32, lg: 42, xl: 64}}>
+                  <AspectRatio ratio={64 / 78} w={{ base: 32, lg: 42, xl: 64 }}>
                     <Image src={SECLogo.src} alt="" />
                   </AspectRatio>
                 </Box>
+                {/* mask */}
+                <Box
+                  w={"100%"}
+                  h={"100%"}
+                  pos={"absolute"}
+                  top={-1}
+                  bg={"linear-gradient( #111111, #47444200)"}
+                  style={{
+                    borderRadius: 100,
+                    borderTop: "1px solid #ffffffcc",
+                  }}
+                />
               </Box>
               <Text
                 lh={"100%"}
-                lts={{base: -2, lg: -6}}
+                lts={{ base: -2, lg: -6 }}
                 fz={{ base: 53, lg: 73, xl: 110 }}
                 style={{
                   background: "radial-gradient(#ffffff 60%, #000000 100%)",
@@ -373,7 +422,9 @@ const ChartItem = () => (
           textDecorationColor: "#F2F5F7cc",
         }}
       >
-        <Text c={"#F2F5F7cc"} fz={{base: 11, lg: 14}}>See Details</Text>
+        <Text c={"#F2F5F7cc"} fz={{ base: 11, lg: 14 }}>
+          See Details
+        </Text>
       </Link>
     </Box>
   </Box>
