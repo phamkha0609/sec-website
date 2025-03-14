@@ -36,7 +36,7 @@ function Pioneer() {
       }}
     >
       <Box
-        mih={"100vh"}
+        mih={{ lg: "100vh" }}
         bg={"linear-gradient(#070707 96%, #3a1f0d)"}
         style={{
           borderTopLeftRadius: isMobile ? 40 : isTablet ? 52 : 80,
