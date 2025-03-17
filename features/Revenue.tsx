@@ -59,7 +59,7 @@ function Revenue() {
       id="revenue"
     >
       <Flex
-        direction={{ base: "column", lg: "row" }}
+        direction={{ base: "column", sm: "row" }}
         align={"center"}
         justify={"space-between"}
         gap={24}
@@ -91,7 +91,7 @@ function Revenue() {
 
       <Flex
         mt={{ base: 40, lg: 52, xl: 80 }}
-        direction={{ base: "column", lg: "row" }}
+        direction={{ base: "column", sm: "row" }}
         justify={"space-between"}
         align={"center"}
         gap={24}

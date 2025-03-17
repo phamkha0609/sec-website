@@ -68,7 +68,7 @@ function WhyChoose() {
       px={{ lg: 100, xl: 120 }}
     >
       <Flex
-        direction={{ base: "column", lg: "row" }}
+        direction={{ base: "column", sm: "row" }}
         align={"center"}
         justify={"space-between"}
         gap={24}

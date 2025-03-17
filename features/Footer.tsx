@@ -28,7 +28,7 @@ function Footer() {
       <Box>
         <Container fluid pt={"md"} px={{ base: 16, lg: 106, xl: 160 }}>
           <Flex
-            direction={{ base: "column", lg: "row" }}
+            direction={{ base: "column", sm: "row" }}
             align={"center"}
             justify={"space-between"}
             gap={24}
@@ -76,7 +76,7 @@ function Footer() {
             mt={{ base: 40, lg: 60 }}
             justify={"space-between"}
             gap={40}
-            direction={{ base: "column", lg: "row" }}
+            direction={{ base: "column", sm: "row" }}
           >
             <Box w={{ base: "100%", lg: "35%" }}>
               <SocialMenu />
@@ -122,7 +122,7 @@ function Footer() {
           </Text>
 
           <Flex
-            w={{ base: "50%", lg: "20%" }}
+            w={{ base: "50%", sm: "20%" }}
             gap={"md"}
             justify={{ base: "flex-end", lg: "center" }}
             align={"center"}

@@ -52,7 +52,7 @@ function About() {
             pt={{ base: 160, lg: 240, xl: 360 }}
           >
             <Flex
-              direction={{ base: "column", lg: "row" }}
+              direction={{ base: "column", sm: "row" }}
               align={"center"}
               justify={"space-between"}
               gap={24}
@@ -86,7 +86,7 @@ function About() {
               <Box>
                 <AspectRatio
                   ratio={503 / 569}
-                  w={{ base: "90%", lg: 503 }}
+                  w={{ base: "90%", sm: 320, lg: 503 }}
                   data-aos={"fade-up"}
                 >
                   <Image src={GatewayImg.src} alt="" />
