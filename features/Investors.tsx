@@ -12,6 +12,10 @@ function Investors() {
         ta={"center"}
         fz={{ base: 40, lg: 52, xl: 80 }}
         lh={"100%"}
+        mah={140}
+        style={{
+          overflowY: "hidden",
+        }}
       >
         OUR
       </Text>
@@ -21,6 +25,10 @@ function Investors() {
         ta={"center"}
         fz={{ base: 40, lg: 52, xl: 80 }}
         lh={"100%"}
+        mah={140}
+        style={{
+          overflowY: "hidden",
+        }}
       >
         INVESTORS
       </Title>

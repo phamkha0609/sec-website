@@ -1,6 +1,6 @@
 @keyframes move-anim {
     0% {
-        top: -200px;
+        top: -150px;
         right: 100px;
         transform: rotate(10deg) scale(1);
         opacity: 1;
@@ -12,7 +12,7 @@
         opacity: 1;
     }
     100% {
-        top: 200px;
+        top: 150px;
         right: 30px;
         transform: rotate(-100deg) scale(0.75);
         opacity: 1;
@@ -20,16 +20,24 @@
 }
 
 .gold{
-    animation: move-anim 6s linear infinite;
+    animation: move-anim 5s linear infinite;
 }
 
 .gold2{
-    animation: move-anim 6s linear infinite;
-    animation-delay: 2s;
+    animation: move-anim 5s linear infinite;
+    animation-delay: 1s;
 }
 
 .gold3{
-    animation: move-anim 6s linear infinite;
+    animation: move-anim 5s linear infinite;
+    animation-delay: 2s;
+}
+.gold4{
+    animation: move-anim 5s linear infinite;
+    animation-delay: 3s;
+}
+.gold5{
+    animation: move-anim 5s linear infinite;
     animation-delay: 4s;
 }
 
@@ -38,7 +46,7 @@
 @keyframes moveout-anim {
     0% {
         top: -50px;
-        right: 30px;
+        right: 50px;
         transform: rotate(-60deg) scale(0.75);
         opacity: 1;
     }
@@ -50,22 +58,30 @@
     }
     100% {
         top: 200px;
-        right: 300px;
+        right: 250px;
         transform: rotate(10deg) scale(1);
         opacity: 0;
     }
 }
 
 .sec {
-    animation: moveout-anim 6s linear infinite;
+    animation: moveout-anim 5s linear infinite;
 }
 
 .sec2 {
-    animation: moveout-anim 6s linear infinite;
-    animation-delay: 2s;
+    animation: moveout-anim 5s linear infinite;
+    animation-delay: 1s;
 }
 
 .sec3 {
-    animation: moveout-anim 6s linear infinite;
+    animation: moveout-anim 5s linear infinite;
+    animation-delay: 2s;
+}
+.sec4 {
+    animation: moveout-anim 5s linear infinite;
+    animation-delay: 3s;
+}
+.sec5 {
+    animation: moveout-anim 5s linear infinite;
     animation-delay: 4s;
 }

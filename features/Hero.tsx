@@ -112,6 +112,22 @@ function Hero() {
                     <Image src={Gold.src} alt="" />
                   </AspectRatio>
                 </Box>
+                <Box opacity={0} pos={"absolute"} className={styles[`gold4`]}>
+                  <AspectRatio
+                    ratio={68 / 95}
+                    w={{ base: 36, sm: 52, lg: 68, xl: 68 }}
+                  >
+                    <Image src={Gold.src} alt="" />
+                  </AspectRatio>
+                </Box>
+                <Box opacity={0} pos={"absolute"} className={styles[`gold5`]}>
+                  <AspectRatio
+                    ratio={68 / 95}
+                    w={{ base: 36, sm: 52, lg: 68, xl: 68 }}
+                  >
+                    <Image src={Gold.src} alt="" />
+                  </AspectRatio>
+                </Box>
                 {/* mask */}
                 <Box
                   w={"100%"}
@@ -165,6 +181,16 @@ function Hero() {
                   </AspectRatio>
                 </Box>
                 <Box opacity={0} pos={"absolute"} className={styles[`sec3`]}>
+                  <AspectRatio ratio={64 / 78} w={{ base: 32, sm: 42, xl: 64 }}>
+                    <Image src={SECLogo.src} alt="" />
+                  </AspectRatio>
+                </Box>
+                <Box opacity={0} pos={"absolute"} className={styles[`sec4`]}>
+                  <AspectRatio ratio={64 / 78} w={{ base: 32, sm: 42, xl: 64 }}>
+                    <Image src={SECLogo.src} alt="" />
+                  </AspectRatio>
+                </Box>
+                <Box opacity={0} pos={"absolute"} className={styles[`sec5`]}>
                   <AspectRatio ratio={64 / 78} w={{ base: 32, sm: 42, xl: 64 }}>
                     <Image src={SECLogo.src} alt="" />
                   </AspectRatio>
@@ -256,40 +282,64 @@ const itemStyle: BoxProps = {
 };
 
 const BalaceItem = () => (
-  <Box {...itemStyle} data-aos={"slide-up"}>
-    <Text fw={500} c={"#ffffffcc"} ta={"center"} fz={{ lg: 18 }}>
-      Online Silver Exchange
-    </Text>
-
-    <Paper
-      mx={"auto"}
-      w={"fit-content"}
-      radius={100}
-      bg={"#ffffff22"}
-      mt={{ base: 24, lg: 32 }}
-      py={{ base: 2, lg: 4 }}
-      px={{ base: 6, lg: 10.33 }}
+  <Box
+    {...itemStyle}
+    data-aos={"slide-up"}
+    px={{ base: 12, lg: 20 }}
+    py={{ base: 12 }}
+  >
+    <Flex
+      direction={{ base: "row", sm: "column" }}
+      justify={"space-between"}
+      align={"center"}
     >
-      <Text fw={400} lh={"100%"} c={"#fff"} fz={{ lg: 15.5 }}>
-        My Balance
+      <Text fw={500} c={"#ffffffcc"} ta={"center"} fz={{ base: 11, sm: 18 }}>
+        Online Silver Exchange
       </Text>
-    </Paper>
 
-    <Flex gap={6} mt={{ base: 6, lg: 10 }} justify={"center"} align={"center"}>
-      <Text fw={400} lh={"100%"} fz={{ base: 16, lg: 38 }} c={"#ffffffcc"}>
-        0.00
-      </Text>
-      <Text fw={400} lh={"100%"} c={"#ffffffcc"} fz={{ base: 10, lg: 15.5 }}>
-        USD
-      </Text>
+      <Flex direction={{ base: "row", sm: "column" }} gap={8} align={"center"}>
+        <Paper
+          mx={"auto"}
+          w={"fit-content"}
+          h={"fit-content"}
+          radius={100}
+          bg={"#ffffff22"}
+          mt={{ base: 0, sm: 32 }}
+          py={{ base: 2, sm: 4 }}
+          px={{ base: 6, sm: 10.33 }}
+        >
+          <Text fw={400} lh={"100%"} c={"#fff"} fz={{ base: 8, sm: 15.5 }}>
+            My Balance
+          </Text>
+        </Paper>
+
+        <Flex
+          gap={6}
+          mt={{ base: 0, sm: 10 }}
+          justify={"center"}
+          align={"center"}
+        >
+          <Text fw={400} lh={"100%"} fz={{ base: 16, sm: 38 }} c={"#ffffffcc"}>
+            0.00
+          </Text>
+          <Text
+            fw={400}
+            lh={"100%"}
+            c={"#ffffffcc"}
+            fz={{ base: 10, sm: 15.5 }}
+          >
+            USD
+          </Text>
+        </Flex>
+      </Flex>
     </Flex>
 
-    <Flex mt={{ base: 15, lg: 24 }} justify={"space-between"} gap={8}>
+    <Flex mt={{ base: 15, sm: 35 }} justify={"space-between"} gap={8}>
       <Paper
         bg={"#ffffff10"}
-        p={{ base: 4, lg: 8 }}
+        p={{ base: 4, sm: 8 }}
         radius={12}
-        w={{ base: "50%", lg: "50%" }}
+        w={{ base: "50%", sm: "50%" }}
       >
         <Flex align={"center"} gap={4}>
           <Center
@@ -307,13 +357,19 @@ const BalaceItem = () => (
             </Box>
           </Center>
 
-          <Text c={"#ffffffcc"}>Income</Text>
+          <Text c={"#ffffffcc"} fz={{ base: 8, sm: 12 }}>
+            Income
+          </Text>
         </Flex>
 
-        <Flex mt={{ base: 6, lg: 12 }} gap={{ base: 32, lg: 20 }}>
+        <Flex
+          mt={{ base: 6, sm: 12 }}
+          gap={{ base: 32, sm: 20 }}
+          justify={"space-between"}
+        >
           <Flex gap={6} justify={"center"} align={"center"}>
             <Text c={"#ffffffcc"}>0.00</Text>
-            <Text c={"#ffffffcc"} fz={{ base: 6, lg: 8 }}>
+            <Text c={"#ffffffcc"} fz={{ base: 6, sm: 8 }}>
               USD
             </Text>
           </Flex>
@@ -326,7 +382,7 @@ const BalaceItem = () => (
       <Paper
         w={{ base: "50%", lg: "50%" }}
         bg={"#ffffff10"}
-        p={{ base: 4, lg: 8 }}
+        p={{ base: 4, sm: 8 }}
         radius={12}
       >
         <Flex align={"center"} gap={4}>
@@ -345,13 +401,19 @@ const BalaceItem = () => (
             </Box>
           </Center>
 
-          <Text c={"#ffffffcc"}>Expense</Text>
+          <Text c={"#ffffffcc"} fz={{ base: 8, sm: 12 }}>
+            Expense
+          </Text>
         </Flex>
 
-        <Flex mt={{ base: 6, lg: 12 }} gap={{ base: 32, lg: 20 }}>
+        <Flex
+          mt={{ base: 6, sm: 12 }}
+          gap={{ base: 32, sm: 20 }}
+          justify={"space-between"}
+        >
           <Flex gap={6} justify={"center"} align={"center"}>
             <Text c={"#ffffffcc"}>0.00</Text>
-            <Text c={"#ffffffcc"} fz={{ base: 6, lg: 8 }}>
+            <Text c={"#ffffffcc"} fz={{ base: 6, sm: 8 }}>
               USD
             </Text>
           </Flex>
@@ -366,18 +428,18 @@ const BalaceItem = () => (
 );
 const SwapItem = () => (
   <Box {...itemStyle} data-aos={"slide-up"} data-aos-delay={100}>
-    <Text fw={500} c={"#ffffffcc"} ta={"center"} fz={{ lg: 18 }}>
+    <Text fw={500} c={"#ffffffcc"} ta={"center"} fz={{ base: 11, sm: 18 }}>
       Silver Swap
     </Text>
 
-    <Box mt={{ base: 22, lg: 45 }}>
+    <Box mt={{ base: 22, sm: 45 }}>
       <HeroSwap />
     </Box>
   </Box>
 );
 const ChartItem = () => (
   <Box {...itemStyle} data-aos={"slide-up"} data-aos-delay={200}>
-    <Text fw={500} c={"#ffffffcc"} fz={{ lg: 18 }}>
+    <Text fw={500} c={"#ffffffcc"} fz={{ base: 11, sm: 18 }}>
       Statistic
     </Text>
 

@@ -55,7 +55,7 @@ function Revenue() {
     <Container
       fluid
       pb={{ base: 60, lg: 120, xl: 180 }}
-      px={{ lg: 100, xl: 160 }}
+      px={{ lg: 100, xl: 120 }}
       id="revenue"
     >
       <Flex
@@ -77,7 +77,7 @@ function Revenue() {
         </Box>
         <Box>
           <Text
-            maw={{ base: 348, xl: 522 }}
+            maw={{ base: 348, sm: 450, xl: 522 }}
             c={"#6b728b"}
             fw={500}
             fz={{ base: 14, xl: 20 }}

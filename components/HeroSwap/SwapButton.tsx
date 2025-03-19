@@ -9,14 +9,14 @@ type SwapButtonProps = {
 function SwapButton({ onClick }: SwapButtonProps) {
   return (
     <ActionIcon
-      my={{ base: "auto", lg: -17 }}
+      my={{ base: "auto", sm: -17 }}
       color="#fc5a40"
       onClick={onClick}
-      w={{ lg: 52 }}
-      h={{ lg: 52 }}
+      w={{ base: 24, sm: 52 }}
+      h={{ base: 24, sm: 52 }}
       radius={52}
     >
-      <AspectRatio ratio={22 / 20} w={{ base: 12, lg: 22 }}>
+      <AspectRatio ratio={22 / 20} w={{ base: 12, sm: 22 }}>
         <SwapIcon />
       </AspectRatio>
     </ActionIcon>

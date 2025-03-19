@@ -44,7 +44,7 @@ function Pioneer() {
         }}
       >
         <Flex
-          direction={{ base: "column", lg: "row" }}
+          direction={{ base: "column", sm: "row" }}
           align={"center"}
           justify={"space-between"}
           gap={66}
@@ -81,7 +81,7 @@ function Pioneer() {
               style={{
                 border: "1px solid #FC5A4088",
               }}
-              fw={400}
+              fw={500}
             >
               How, you ask?
             </Button>

@@ -18,11 +18,11 @@ function HeroSwap() {
   return (
     <Box>
       <Flex
-        direction={{ base: "row", lg: "column" }}
+        direction={{ base: "row", sm: "column" }}
         align={"center"}
         justify={"space-between"}
       >
-        <Box w={{ base: "45%", lg: "100%" }}>
+        <Box w={{ base: "43%", sm: "100%" }}>
           <SelectInput
             coinData={fromCoin}
             fromCoin={fromCoin}
@@ -31,7 +31,7 @@ function HeroSwap() {
           />
         </Box>
         <SwapButton onClick={handleSwap} />
-        <Box w={{ base: "45%", lg: "100%" }}>
+        <Box w={{ base: "43%", sm: "100%" }}>
           <SelectInput
             coinData={toCoin}
             fromCoin={fromCoin}

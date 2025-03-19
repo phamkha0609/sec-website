@@ -24,7 +24,7 @@ import PaperBG from "./PaperBG.png";
 import CircleAbstract from "./CircleAbstract.png";
 import HomeIcon from "./HomeIcon.png";
 import LogoVectorDark from "./LogoVectorDark.png";
-import AboutIcon from "./HomeIcon.png";
+import AboutIcon from "./AboutIcon.png";
 import EcosystemIcon from "./EcosystemIcon.png";
 import RevenueIcon from "./RevenueIcon.png";
 import BlogIcon from "./BlogIcon.png";
