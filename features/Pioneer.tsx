@@ -106,7 +106,7 @@ function Pioneer() {
         </Flex>
 
         <AspectRatio
-          ratio={isMobile ? 390 / 589 : 3840 / 2346}
+          ratio={isMobile ? 390 / 589 : 1920 / 1441}
           w={{ base: "120%", lg: "100%" }}
           id="ecosystem"
         >
@@ -118,7 +118,7 @@ function Pioneer() {
             <Center
               pos={"absolute"}
               w={"100%"}
-              bottom={{ base: "25%", xl: 280 }}
+              bottom={{ base: "25%", xl: 460 }}
             >
               <Box>
                 <Text
