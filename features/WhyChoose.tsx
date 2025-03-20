@@ -103,7 +103,7 @@ function WhyChoose() {
       </Flex>
 
       <Flex
-        mt={40}
+        mt={{ lg: 40, xl: 60 }}
         justify={"space-between"}
         direction={{ base: "column", lg: "row" }}
       >
