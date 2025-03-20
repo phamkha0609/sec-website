@@ -118,7 +118,7 @@ function Pioneer() {
             <Center
               pos={"absolute"}
               w={"100%"}
-              bottom={{ base: "25%", xl: 460 }}
+              bottom={{ base: "25%", xl: 520 }}
             >
               <Box>
                 <Text
