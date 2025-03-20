@@ -40,7 +40,7 @@ function SelectInput({
       w={"100%"}
       radius={isMobile ? 8 : 24}
       style={{
-        border: "2px solid #ffffff10",
+        border: "1px solid #ffffff22",
       }}
       p={{ base: 8, lg: 15 }}
     >
@@ -88,12 +88,16 @@ function SelectInput({
               size={"sm"}
               variant={"transparent"}
               rightSection={
-                <AspectRatio ratio={11 / 8} w={{ base: 8, lg: 11 }}>
+                <AspectRatio
+                  ratio={11 / 8}
+                  w={{ base: 8, lg: 11 }}
+                  mt={{ base: -4, lg: 0 }}
+                >
                   <ArrowDownV2 />
                 </AspectRatio>
               }
             >
-              <Text c={"#ffffffcc"} fz={{ base: 10, lg: 12, xl: 16 }} fw={400}>
+              <Text c={"#ffffffcc"} fz={{ base: 8, lg: 12, xl: 16 }} fw={400}>
                 {coinData ? coinData.symbol : "Select"}
               </Text>
             </Button>

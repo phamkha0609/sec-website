@@ -38,7 +38,7 @@ function About() {
       <Box
         pos={"absolute"}
         right={{ base: "5%", lg: "5%", xl: "5%" }}
-        bottom={{ base: "5%", lg: "5%", xl: "3%" }}
+        bottom={{ base: "20%", lg: "5%", xl: "3%" }}
       >
         <AspectRatio
           ratio={279 / 269}

@@ -15,6 +15,7 @@ function SwapButton({ onClick }: SwapButtonProps) {
       w={{ base: 24, sm: 52 }}
       h={{ base: 24, sm: 52 }}
       radius={52}
+      mx={{ base: 10, lg: "auto" }}
     >
       <AspectRatio ratio={22 / 20} w={{ base: 12, sm: 22 }}>
         <SwapIcon />
