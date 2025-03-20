@@ -65,23 +65,19 @@
 }
 
 .sec {
-    animation: moveout-anim 5s linear infinite;
+    animation: moveout-anim 8s linear infinite;
 }
 
 .sec2 {
-    animation: moveout-anim 5s linear infinite;
-    animation-delay: 1s;
+    animation: moveout-anim 8s linear infinite;
+    animation-delay: 2s;
 }
 
 .sec3 {
-    animation: moveout-anim 5s linear infinite;
-    animation-delay: 2s;
+    animation: moveout-anim 8s linear infinite;
+    animation-delay: 4s;
 }
 .sec4 {
-    animation: moveout-anim 5s linear infinite;
-    animation-delay: 3s;
-}
-.sec5 {
-    animation: moveout-anim 5s linear infinite;
-    animation-delay: 4s;
+    animation: moveout-anim 8s linear infinite;
+    animation-delay: 6s;
 }

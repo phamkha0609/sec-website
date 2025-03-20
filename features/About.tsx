@@ -11,14 +11,18 @@ import {
 } from "@mantine/core";
 import React from "react";
 import { AboutBG, BackedImg, CardCollect, GatewayImg } from "../assets/imgs";
+import { useMediaQuery } from "@mantine/hooks";
 
 function About() {
+  const matches = useMediaQuery("(min-width: 61em) and (max-width: 90em)");
+  const is1440 = useMediaQuery("(min-width: 1440px) and (max-width: 1920px)");
+
   return (
     <Box bg={"#000000"} pos={"relative"} id="about">
       <Box
         pos={"absolute"}
-        left={{ base: "5%", lg: "20%", xl: "15%" }}
-        top={{ base: "55%", lg: "50%", xl: "70%" }}
+        left={matches ? "10%" : { base: "5%", lg: "20%", xl: "15%" }}
+        top={is1440 ? "55%" : { base: "55%", lg: "50%", xl: "70%" }}
         style={{
           zIndex: 2,
         }}
@@ -38,17 +42,20 @@ function About() {
       >
         <AspectRatio
           ratio={279 / 269}
-          w={{ base: 80, sm: 200, lg: 279, xl: 419 }}
+          w={is1440 ? 300 : { base: 80, sm: 200, lg: 279, xl: 419 }}
           data-aos={"zoom-in-up"}
         >
           <Image src={CardCollect.src} alt="" />
         </AspectRatio>
       </Box>
       <AspectRatio ratio={1920 / 1358}>
-        <BackgroundImage src={AboutBG.src} mih={{ lg: "100vh" }}>
+        <BackgroundImage
+          src={AboutBG.src}
+          mih={matches ? "auto" : { lg: "100vh" }}
+        >
           <Container
             fluid
-            px={{ lg: 160 }}
+            px={matches ? 40 : { lg: 160 }}
             pt={{ base: 200, lg: 240, xl: 360 }}
           >
             <Flex

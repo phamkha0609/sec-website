@@ -11,6 +11,7 @@ import React from "react";
 import UserIcon from "../assets/vectors/UserIcon";
 import CircleIcon from "../assets/vectors/CircleIcon";
 import BarIcon from "../assets/vectors/BarIcon";
+import { useMediaQuery } from "@mantine/hooks";
 
 const data = [
   {
@@ -60,12 +61,15 @@ const data = [
 ];
 
 function WhyChoose() {
+  const matches = useMediaQuery("(min-width: 61em) and (max-width: 90em)");
+  const is1440 = useMediaQuery("(min-width: 1440px) and (max-width: 1920px)");
+
   return (
     <Container
       fluid
       mt={{ base: 90 }}
       py={{ base: 60, lg: 100, xl: 180 }}
-      px={{ lg: 100, xl: 120 }}
+      px={matches ? 40 : { lg: 100, xl: 120 }}
     >
       <Flex
         direction={{ base: "column", sm: "row" }}
@@ -114,7 +118,7 @@ function WhyChoose() {
             {i !== data.length - 1 && (
               <Divider
                 visibleFrom="xl"
-                mx={{ base: 60, lg: 75 }}
+                mx={is1440 ? 30 : { base: 60, lg: 75 }}
                 orientation={"vertical"}
                 variant={"dashed"}
                 h={"75%"}
@@ -132,44 +136,46 @@ function WhyChoose() {
 
 type FeatureItemProps = (typeof data)[0];
 
-const FeatureItem = ({ icon, subTitle, title, content }: FeatureItemProps) => (
-  <Box w={{ base: "100%", lg: 220, xl: "80%" }}>
-    <Flex
-      align={"center"}
-      gap={10}
-      bg={"#FE883310"}
-      py={4}
-      px={10}
-      style={{
-        borderRadius: 12,
-      }}
-      w={"fit-content"}
-    >
-      <Box mb={-6}>{icon}</Box>
-      <Text fw={500} lh={"100%"} c={"#fe8833"} fz={{ base: 11, xl: 16 }}>
-        {subTitle}
+const FeatureItem = ({ icon, subTitle, title, content }: FeatureItemProps) => {
+  return (
+    <Box w={{ base: "100%", lg: 220, xl: "80%" }}>
+      <Flex
+        align={"center"}
+        gap={10}
+        bg={"#FE883310"}
+        py={4}
+        px={10}
+        style={{
+          borderRadius: 12,
+        }}
+        w={"fit-content"}
+      >
+        <Box mb={-6}>{icon}</Box>
+        <Text fw={500} lh={"100%"} c={"#fe8833"} fz={{ base: 11, xl: 16 }}>
+          {subTitle}
+        </Text>
+      </Flex>
+
+      <Text
+        lh={"120%"}
+        fw={500}
+        mt={{ base: 40, xl: 60 }}
+        fz={{ base: 16, xl: 24 }}
+      >
+        {title}
       </Text>
-    </Flex>
 
-    <Text
-      lh={"120%"}
-      fw={500}
-      mt={{ base: 40, xl: 60 }}
-      fz={{ base: 16, xl: 24 }}
-    >
-      {title}
-    </Text>
-
-    <Text
-      fw={500}
-      lh={"150%"}
-      c={"#6b7280"}
-      mt={{ base: 21, lg: 24, xl: 32 }}
-      fz={{ base: 11, lg: 16 }}
-    >
-      {content}
-    </Text>
-  </Box>
-);
+      <Text
+        fw={500}
+        lh={"150%"}
+        c={"#6b7280"}
+        mt={{ base: 21, lg: 24, xl: 32 }}
+        fz={{ base: 11, lg: 16 }}
+      >
+        {content}
+      </Text>
+    </Box>
+  );
+};
 
 export default WhyChoose;

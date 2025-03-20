@@ -21,7 +21,7 @@ import PaymentFee from "../assets/vectors/PaymentFee";
 import DappFee from "../assets/vectors/DappFee";
 import AssetIcon from "../assets/vectors/AssetIcon";
 import IotIcon from "../assets/vectors/IotIcon";
-import { useHover } from "@mantine/hooks";
+import { useHover, useMediaQuery } from "@mantine/hooks";
 
 const revenueData = [
   {
@@ -51,11 +51,12 @@ const revenueData = [
 ];
 
 function Revenue() {
+  const matches = useMediaQuery("(min-width: 61em) and (max-width: 90em)");
   return (
     <Container
       fluid
       pb={{ base: 60, lg: 120, xl: 180 }}
-      px={{ lg: 100, xl: 120 }}
+      px={matches ? 40 : { lg: 100, xl: 120 }}
       id="revenue"
     >
       <Flex

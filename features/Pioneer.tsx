@@ -14,7 +14,6 @@ import {
 import { useMediaQuery } from "@mantine/hooks";
 import React from "react";
 import {
-  CircleAbstract,
   CommunityBG,
   CommunityMobileBG,
   DiscoverButton,
@@ -27,6 +26,8 @@ import styles from "./pioneer.module.css";
 function Pioneer() {
   const isMobile = useMediaQuery("(max-width: 801px)");
   const isTablet = useMediaQuery("(min-width: 801px)");
+  const matches = useMediaQuery("(min-width: 61em) and (max-width: 90em)");
+
   return (
     <Box
       pos={"relative"}
@@ -36,7 +37,6 @@ function Pioneer() {
       }}
     >
       <Box
-        mih={{ lg: "100vh" }}
         bg={"linear-gradient(#070707 96%, #3a1f0d)"}
         style={{
           borderTopLeftRadius: isMobile ? 40 : isTablet ? 52 : 80,
@@ -48,7 +48,7 @@ function Pioneer() {
           align={"center"}
           justify={"space-between"}
           gap={66}
-          px={{ base: 16, lg: 119, xl: 145 }}
+          px={matches ? 40 : { base: 16, lg: 119, xl: 145 }}
           py={{ base: 60, lg: 105, xl: 140 }}
         >
           <Box w={{ base: "100%", lg: "50%" }} data-aos={"fade-up"}>
@@ -82,6 +82,7 @@ function Pioneer() {
                 border: "1px solid #FC5A4088",
               }}
               fw={500}
+              fz={{ base: 12, lg: 16 }}
             >
               How, you ask?
             </Button>

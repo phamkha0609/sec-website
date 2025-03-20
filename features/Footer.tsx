@@ -15,15 +15,21 @@ import ArrowUpRight from "../assets/vectors/ArrowUpRight";
 import SocialMenu from "../components/Footer/SocialMenu";
 import CategoryMenu from "../components/Footer/CategoryMenu";
 import PolicyMenu from "../components/Footer/PolicyMenu";
+import { useMediaQuery } from "@mantine/hooks";
 
 function Footer() {
+  const isMobile = useMediaQuery("(max-width: 1280px)");
   return (
     <Box
       w={"100%"}
       style={{
         zIndex: -1,
       }}
-      bg={"linear-gradient(#fefbf3, #fff)"}
+      bg={
+        isMobile
+          ? "linear-gradient(#fffdfc, #fff)"
+          : "linear-gradient(#fefbf3, #fff)"
+      }
     >
       <Box>
         <Container fluid pt={"md"} px={{ base: 16, lg: 106, xl: 160 }}>

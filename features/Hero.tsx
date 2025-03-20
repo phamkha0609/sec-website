@@ -190,11 +190,6 @@ function Hero() {
                     <Image src={SECLogo.src} alt="" />
                   </AspectRatio>
                 </Box>
-                <Box opacity={0} pos={"absolute"} className={styles[`sec5`]}>
-                  <AspectRatio ratio={64 / 78} w={{ base: 32, sm: 42, xl: 64 }}>
-                    <Image src={SECLogo.src} alt="" />
-                  </AspectRatio>
-                </Box>
                 {/* mask */}
                 <Box
                   w={"100%"}
