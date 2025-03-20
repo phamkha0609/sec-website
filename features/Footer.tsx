@@ -25,11 +25,7 @@ function Footer() {
       style={{
         zIndex: -1,
       }}
-      bg={
-        isMobile
-          ? "linear-gradient(#fffdfc, #fff)"
-          : "linear-gradient(#fefbf3, #fff)"
-      }
+      bg={isMobile ? "linear-gradient(#fffdfc, #fff)" : "#fff"}
     >
       <Box>
         <Container fluid pt={"md"} px={{ base: 16, lg: 106, xl: 160 }}>
