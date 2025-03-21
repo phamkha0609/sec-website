@@ -122,14 +122,6 @@ function Hero() {
                     <Image src={Gold.src} alt="" />
                   </AspectRatio>
                 </Box>
-                <Box opacity={0} pos={"absolute"} className={styles[`gold5`]}>
-                  <AspectRatio
-                    ratio={68 / 95}
-                    w={{ base: 36, sm: 52, lg: 68, xl: 68 }}
-                  >
-                    <Image src={Gold.src} alt="" />
-                  </AspectRatio>
-                </Box>
                 {/* mask */}
                 <Box
                   w={"100%"}
