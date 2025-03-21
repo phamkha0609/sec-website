@@ -279,7 +279,7 @@ const itemStyle: BoxProps = {
 };
 
 const BalaceItem = () => {
-  const isMobile = useMediaQuery("(max-width: 393px)");
+  const isMobile = useMediaQuery("(max-width: 431px)");
   return (
     <Box
       {...itemStyle}
@@ -471,7 +471,7 @@ const BalaceItem = () => {
   );
 };
 const SwapItem = () => {
-  const isMobile = useMediaQuery("(max-width: 393px)");
+  const isMobile = useMediaQuery("(max-width: 431px)");
   const smallTablet = useMediaQuery(
     "(min-width: 991px) and (max-width: 1280px)"
   );
@@ -502,7 +502,7 @@ const SwapItem = () => {
   );
 };
 const ChartItem = () => {
-  const isMobile = useMediaQuery("(max-width: 393px)");
+  const isMobile = useMediaQuery("(max-width: 431px)");
 
   return (
     <Box
