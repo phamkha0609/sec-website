@@ -88,13 +88,15 @@ function SelectInput({
               size={"sm"}
               variant={"transparent"}
               rightSection={
-                <AspectRatio
-                  ratio={11 / 8}
-                  w={{ base: 8, lg: 11 }}
-                  mt={{ base: -5, lg: 0 }}
-                >
-                  <ArrowDownV2 />
-                </AspectRatio>
+                <Box>
+                  <AspectRatio
+                    ratio={11 / 8}
+                    w={{ base: 7.5, lg: 11 }}
+                    mt={{ base: -5, lg: 0 }}
+                  >
+                    <ArrowDownV2 />
+                  </AspectRatio>
+                </Box>
               }
             >
               <Text
