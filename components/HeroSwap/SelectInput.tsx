@@ -91,13 +91,18 @@ function SelectInput({
                 <AspectRatio
                   ratio={11 / 8}
                   w={{ base: 8, lg: 11 }}
-                  mt={{ base: -4, lg: 0 }}
+                  mt={{ base: -5, lg: 0 }}
                 >
                   <ArrowDownV2 />
                 </AspectRatio>
               }
             >
-              <Text c={"#ffffffcc"} fz={{ base: 8, lg: 12, xl: 16 }} fw={400}>
+              <Text
+                c={"#ffffffcc"}
+                lh={"90%"}
+                fz={{ base: 8, lg: 12, xl: 16 }}
+                fw={400}
+              >
                 {coinData ? coinData.symbol : "Select"}
               </Text>
             </Button>
