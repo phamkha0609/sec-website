@@ -32,7 +32,7 @@ function SelectInput({
   toCoin,
 }: SelectInputProps) {
   const [opened, { open, close }] = useDisclosure(false);
-  const isMobile = useMediaQuery("(max-width: 1024px)");
+  const isMobile = useMediaQuery("(max-width: 990px)");
 
   return (
     <Paper
@@ -40,11 +40,14 @@ function SelectInput({
       w={"100%"}
       radius={isMobile ? 8 : 24}
       style={{
-        border: "1px solid #ffffff22",
+        border: isMobile ? "1px solid #ffffff33" : "1px solid #ffffff22",
       }}
-      p={{ base: 8, lg: 15 }}
+      py={{ base: 0, sm: 12 }}
+      px={{ base: 8, sm: 12 }}
+      maw={{ base: 128, sm: "100%" }}
+      mah={{ base: 43, sm: "100%" }}
     >
-      <Flex align={"center"}>
+      <Flex h={"100%"} align={"center"}>
         <Box w={{ base: "50%", lg: "50%" }}>
           <Flex align={"center"} gap={8}>
             <Box>
@@ -83,31 +86,34 @@ function SelectInput({
         </Box>
         <Box w={{ base: "50%", lg: "50%" }}>
           <Box w={"fit-content"} ml={"auto"}>
-            <Button
+            <Flex
               onClick={open}
-              size={"sm"}
-              variant={"transparent"}
-              rightSection={
-                <Box>
-                  <AspectRatio
-                    ratio={11 / 8}
-                    w={{ base: 7.5, lg: 11 }}
-                    mt={{ base: -5, lg: 0 }}
-                  >
-                    <ArrowDownV2 />
-                  </AspectRatio>
-                </Box>
-              }
+              align={"center"}
+              gap={{ base: 2, lg: 9 }}
+              style={{
+                cursor: "pointer",
+              }}
             >
-              <Text
-                c={"#ffffffcc"}
-                lh={"90%"}
-                fz={{ base: 8, lg: 12, xl: 16 }}
-                fw={400}
+              <Button size={"sm"} variant={"transparent"} px={0}>
+                <Text
+                  c={"#ffffffcc"}
+                  lh={"90%"}
+                  fz={{ base: 8, lg: 12 }}
+                  fw={400}
+                >
+                  {coinData ? coinData.symbol : "Select"}
+                </Text>
+              </Button>
+              <Box
+                h={"fit-content"}
+                w={{ base: 7.5, lg: 11 }}
+                mt={{ base: -3.5, lg: -4 }}
               >
-                {coinData ? coinData.symbol : "Select"}
-              </Text>
-            </Button>
+                <AspectRatio ratio={8 / 6} w={"100%"} h={"100%"}>
+                  <ArrowDownV2 />
+                </AspectRatio>
+              </Box>
+            </Flex>
           </Box>
         </Box>
       </Flex>

@@ -300,6 +300,7 @@ const BalaceItem = () => {
         </Text>
 
         <Flex
+          mt={{ base: 0, sm: 32 }}
           w={{ base: "50%", lg: "100%" }}
           direction={{ base: "row", sm: "column" }}
           justify={{ base: "space-between", lg: "center" }}
@@ -312,11 +313,10 @@ const BalaceItem = () => {
             h={"fit-content"}
             radius={100}
             bg={"#ffffff22"}
-            mt={{ base: 0, sm: 32 }}
             py={{ base: 2, sm: 4 }}
             px={{ base: 6, sm: 10.33 }}
           >
-            <Text fw={400} lh={"100%"} c={"#fff"} fz={{ base: 8, sm: 15.5 }}>
+            <Text fw={300} lh={"100%"} c={"#fff"} fz={{ base: 8, sm: 15.5 }}>
               My Balance
             </Text>
           </Paper>
@@ -336,7 +336,7 @@ const BalaceItem = () => {
               0.00
             </Text>
             <Text
-              fw={400}
+              fw={300}
               lh={"100%"}
               c={"#ffffffcc"}
               fz={{ base: 7, sm: 15.5 }}
@@ -384,27 +384,38 @@ const BalaceItem = () => {
             gap={{ base: 32, sm: 20 }}
             justify={"space-between"}
           >
-            <Flex gap={{ base: 2, lg: 6 }} justify={"center"} align={"center"}>
-              <Text c={"#ffffffcc"} fz={{ base: 7, sm: 8, lg: 10, xl: 14 }}>
+            <Flex gap={3} justify={"center"} align={"center"}>
+              <Text
+                fw={400}
+                c={"#ffffffcc"}
+                fz={{ base: 7, sm: 8, lg: 10, xl: 14 }}
+              >
                 0.00
               </Text>
-              <Text c={"#ffffffcc"} fz={{ base: 5, sm: 8, lg: 10, xl: 6 }}>
+              <Text
+                fw={300}
+                c={"#ffffffcc"}
+                fz={{ base: 5, sm: 8, lg: 10, xl: 6 }}
+              >
                 USD
               </Text>
             </Flex>
 
-            <Paper
+            <Text
               w={{ base: 16, sm: "auto" }}
-              mih={{ base: 10, sm: "auto" }}
+              h={{ base: 10, sm: "fit-content" }}
               fw={400}
               p={{ base: 2, lg: 4 }}
-              radius={isMobile ? 2 : 4}
+              style={{
+                borderRadius: isMobile ? 2 : 4,
+              }}
               bg="#8BDBA344"
               c={"#00C270"}
+              lts={"-2%"}
               fz={{ base: 4.7, lg: 6, xl: 8 }}
             >
               +16%
-            </Paper>
+            </Text>
           </Flex>
         </Paper>
         <Paper
@@ -443,33 +454,41 @@ const BalaceItem = () => {
             gap={{ base: 32, sm: 20 }}
             justify={"space-between"}
           >
-            <Flex gap={{ base: 2, lg: 6 }} justify={"center"} align={"center"}>
+            <Flex gap={{ base: 3 }} justify={"center"} align={"center"}>
               <Text c={"#ffffffcc"} fz={{ base: 7, sm: 8, lg: 10, xl: 14 }}>
                 0.00
               </Text>
-              <Text c={"#ffffffcc"} fz={{ base: 5, sm: 8, lg: 10, xl: 6 }}>
+              <Text
+                fw={300}
+                c={"#ffffffcc"}
+                fz={{ base: 5, sm: 8, lg: 10, xl: 6 }}
+              >
                 USD
               </Text>
             </Flex>
 
-            <Paper
+            <Text
               w={{ base: 16, sm: "auto" }}
-              mih={{ base: 10, sm: "auto" }}
+              h={{ base: 10, sm: "fit-content" }}
               fw={400}
               p={{ base: 2, lg: 4 }}
-              radius={isMobile ? 2 : 4}
+              style={{
+                borderRadius: isMobile ? 2 : 4,
+              }}
               bg="#DB8B8B44"
               c={"#FA5343"}
+              lts={"-2%"}
               fz={{ base: 4.7, lg: 6, xl: 8 }}
             >
               -10%
-            </Paper>
+            </Text>
           </Flex>
         </Paper>
       </Flex>
     </Box>
   );
 };
+
 const SwapItem = () => {
   const isMobile = useMediaQuery("(max-width: 431px)");
   const smallTablet = useMediaQuery(
@@ -501,6 +520,7 @@ const SwapItem = () => {
     </Box>
   );
 };
+
 const ChartItem = () => {
   const isMobile = useMediaQuery("(max-width: 431px)");
 
@@ -523,16 +543,11 @@ const ChartItem = () => {
 
       <Flex mt={{ base: 12, lg: 26 }} justify={"space-between"}>
         <Box>
-          <Text fw={400} lh={"120%"} fz={{ base: 10, lg: 10 }} c={"#F2F5F7cc"}>
+          <Text fw={400} lh={"120%"} fz={12} c={"#F2F5F7cc"}>
             Avg monthly spend
           </Text>
           <Flex mt={{ base: 4, lg: 8 }} gap={6} align={"center"}>
-            <Text
-              fw={500}
-              lh={"100%"}
-              c={"#F2F5F7cc"}
-              fz={{ base: 10, lg: 14 }}
-            >
+            <Text fw={500} lh={"100%"} c={"#F2F5F7cc"} fz={12}>
               820.00 USD
             </Text>
 
@@ -544,22 +559,17 @@ const ChartItem = () => {
               <UpTrend />
             </AspectRatio>
 
-            <Text fz={{ base: 8, lg: 10 }} c={"#00bf8e"} lh={"100%"}>
+            <Text fw={400} fz={{ base: 8, lg: 10 }} c={"#00bf8e"} lh={"100%"}>
               11.9%
             </Text>
           </Flex>
         </Box>
         <Box>
-          <Text fw={400} lh={"120%"} fz={{ base: 10, lg: 10 }} c={"#F2F5F7cc"}>
+          <Text fw={400} lh={"120%"} fz={12} c={"#F2F5F7cc"}>
             Spent this month
           </Text>
           <Flex mt={{ base: 4, lg: 8 }} gap={6} align={"center"}>
-            <Text
-              fw={500}
-              lh={"100%"}
-              c={"#F2F5F7cc"}
-              fz={{ base: 10, lg: 14 }}
-            >
+            <Text fw={500} lh={"100%"} c={"#F2F5F7cc"} fz={12}>
               440.00 USD
             </Text>
 
@@ -571,22 +581,29 @@ const ChartItem = () => {
               <DownTrend />
             </AspectRatio>
 
-            <Text fz={{ base: 8, lg: 10 }} c={"#d93c3c"}>
+            <Text lh={"100%"} fw={400} fz={{ base: 8, lg: 10 }} c={"#d93c3c"}>
               3.9%
             </Text>
           </Flex>
         </Box>
       </Flex>
 
-      <Box mt={{ base: 12, lg: 20 }} mx={"auto"} w={"fit-content"}>
+      <Box
+        mt={{ base: 12, lg: 20 }}
+        mx={"auto"}
+        w={"fit-content"}
+        style={{
+          borderBottom: "1px solid #F2F5F7cc",
+        }}
+      >
         <Link
           href={"#"}
           style={{
-            textDecorationColor: "#F2F5F7cc",
+            textDecoration: "none",
           }}
         >
           <Text c={"#F2F5F7cc"} fz={{ base: 11, lg: 14 }}>
-            See Details
+            See details
           </Text>
         </Link>
       </Box>
