@@ -51,12 +51,17 @@ const revenueData = [
 ];
 
 function Revenue() {
-  const matches = useMediaQuery("(min-width: 61em) and (max-width: 90em)");
+  const matches = useMediaQuery("(min-width: 991px) and (max-width: 1279px)");
+  const isBigTablet = useMediaQuery(
+    "(min-width: 1280px) and (max-width: 1919px)"
+  );
+  const is1440 = useMediaQuery("(min-width: 1440px) and (max-width: 1919px)");
+
   return (
     <Container
       fluid
       pb={{ base: 60, lg: 120, xl: 180 }}
-      px={matches ? 40 : { lg: 100, xl: 120 }}
+      px={matches ? 40 : isBigTablet ? 100 : { sm: 100, xl: 120 }}
       id="revenue"
     >
       <Flex
@@ -121,7 +126,11 @@ function Revenue() {
           </AspectRatio>
         </Box>
 
-        <Flex wrap={"wrap"} w={"100%"} maw={840}>
+        <Flex
+          wrap={"wrap"}
+          w={"100%"}
+          maw={is1440 ? 560 : { base: "100%", sm: 560, xl: 840 }}
+        >
           {revenueData.map((e, i) => (
             <RevenueItem key={i} {...e} />
           ))}
@@ -134,11 +143,16 @@ function Revenue() {
 type RevenueItemProps = (typeof revenueData)[0];
 
 const RevenueItem = ({ Icon, title }: RevenueItemProps) => {
+  const isBigTablet = useMediaQuery(
+    "(min-width: 1280px) and (max-width: 1919px)"
+  );
+  const is1440 = useMediaQuery("(min-width: 1440px) and (max-width: 1919px)");
   const { ref, hovered } = useHover();
   return (
     <BackgroundImage
       w={{ base: "33.33%" }}
       maw={280}
+      h={is1440 ? 192 : { base: 140, sm: 192, xl: 288 }}
       src={PaperBG.src}
       bgsz={"cover"}
       style={{
@@ -157,13 +171,16 @@ const RevenueItem = ({ Icon, title }: RevenueItemProps) => {
         bg={hovered ? "transparent" : "#fff"}
       >
         <Flex direction={"column"} align={"center"}>
-          <AspectRatio ratio={1} w={{ base: 32, lg: 45, xl: 68 }}>
+          <AspectRatio
+            ratio={1}
+            w={isBigTablet ? 45 : { base: 32, lg: 45, xl: 68 }}
+          >
             <Icon color={hovered ? "#000" : "#6B728088"} />
           </AspectRatio>
 
           <Text
             fw={500}
-            fz={{ base: 12, lg: 20 }}
+            fz={isBigTablet ? 14 : { base: 12, lg: 20 }}
             mt={{ base: 16, lg: 32 }}
             ta={"center"}
             c={hovered ? "#000" : "#6B728088"}

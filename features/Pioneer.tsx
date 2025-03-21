@@ -26,7 +26,10 @@ import styles from "./pioneer.module.css";
 function Pioneer() {
   const isMobile = useMediaQuery("(max-width: 801px)");
   const isTablet = useMediaQuery("(min-width: 801px)");
-  const matches = useMediaQuery("(min-width: 61em) and (max-width: 90em)");
+  const matches = useMediaQuery("(min-width: 991px) and (max-width: 1279px)");
+  const isBigTablet = useMediaQuery(
+    "(min-width: 1280px) and (max-width: 1439px)"
+  );
 
   return (
     <Box
@@ -48,7 +51,7 @@ function Pioneer() {
           align={"center"}
           justify={"space-between"}
           gap={66}
-          px={matches ? 40 : { base: 16, lg: 119, xl: 145 }}
+          px={matches ? 40 : isBigTablet ? 96 : { base: 16, lg: 119, xl: 145 }}
           py={{ base: 60, lg: 105, xl: 140 }}
         >
           <Box w={{ base: "100%", lg: "50%" }} data-aos={"fade-up"}>
@@ -82,7 +85,7 @@ function Pioneer() {
                 border: "1px solid #FC5A4088",
               }}
               fw={500}
-              fz={{ base: 12, lg: 16 }}
+              fz={isBigTablet ? 12 : { base: 12, lg: 16 }}
             >
               How, you ask?
             </Button>
@@ -106,7 +109,7 @@ function Pioneer() {
         </Flex>
 
         <AspectRatio
-          ratio={isMobile ? 390 / 589 : 1920 / 1441}
+          ratio={isMobile ? 390 / 589 : 1920 / 1280}
           w={{ base: "120%", lg: "100%" }}
           id="ecosystem"
         >
@@ -118,7 +121,7 @@ function Pioneer() {
             <Center
               pos={"absolute"}
               w={"100%"}
-              bottom={{ base: "25%", xl: 520 }}
+              bottom={isBigTablet ? 320 : { base: "25%", xl: 520 }}
             >
               <Box>
                 <Text

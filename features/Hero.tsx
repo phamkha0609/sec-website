@@ -35,6 +35,7 @@ import styles from "./hero.module.css";
 import { useMediaQuery } from "@mantine/hooks";
 
 function Hero() {
+  const is991 = useMediaQuery("(min-width: 991px) and (max-width: 1279px)");
   return (
     <BackgroundImage src={HeroBG.src} pos={"relative"} id="firtSection">
       <AspectRatio
@@ -243,9 +244,9 @@ function Hero() {
                 }}
                 data-aos={"fade-up"}
               />
-              <BalaceItem />
-              <SwapItem />
-              <ChartItem />
+              <BalaceItem is991={is991} />
+              <SwapItem is991={is991} />
+              <ChartItem is991={is991} />
               <Box
                 visibleFrom="lg"
                 w={350}
@@ -278,11 +279,12 @@ const itemStyle: BoxProps = {
   },
 };
 
-const BalaceItem = () => {
+const BalaceItem = ({ is991 }: { is991?: boolean }) => {
   const isMobile = useMediaQuery("(max-width: 431px)");
   return (
     <Box
       {...itemStyle}
+      maw={is991 ? 300 : 315}
       style={{
         borderRadius: isMobile ? 12 : 16,
       }}
@@ -356,25 +358,25 @@ const BalaceItem = () => {
         >
           <Flex align={"center"} gap={4}>
             <Center
-              w={{ base: 11, lg: 21 }}
-              h={{ base: 11, lg: 21 }}
+              w={{ base: 11, sm: 21 }}
+              h={{ base: 11, sm: 21 }}
               bg={"#fff"}
               style={{
                 borderRadius: 21,
               }}
             >
               <Box
-                w={{ base: 4, lg: 8 }}
-                mt={{ base: -4, lg: 0 }}
-                mr={{ base: -1, lg: 0 }}
+                w={{ base: 4, sm: 8 }}
+                mt={{ base: -4, sm: 0 }}
+                mr={{ base: -1, sm: 0 }}
               >
-                <AspectRatio ratio={8 / 10} w={{ base: 4, lg: 8 }}>
+                <AspectRatio ratio={8 / 10} w={{ base: 4, sm: 8 }}>
                   <ArrowUp />
                 </AspectRatio>
               </Box>
             </Center>
 
-            <Text c={"#ffffffcc"} fz={{ base: 7, sm: 12 }}>
+            <Text c={"#ffffffcc"} fz={{ base: 10, sm: 12 }}>
               Income
             </Text>
           </Flex>
@@ -388,31 +390,32 @@ const BalaceItem = () => {
               <Text
                 fw={400}
                 c={"#ffffffcc"}
-                fz={{ base: 7, sm: 8, lg: 10, xl: 14 }}
+                lh={"100%"}
+                fz={{ base: 12, xl: 14 }}
               >
                 0.00
               </Text>
               <Text
+                lh={"100%"}
                 fw={300}
                 c={"#ffffffcc"}
-                fz={{ base: 5, sm: 8, lg: 10, xl: 6 }}
+                fz={{ base: 6, sm: 8 }}
+                mt={{ base: 1, sm: 2 }}
               >
                 USD
               </Text>
             </Flex>
 
             <Text
-              w={{ base: 16, sm: "auto" }}
-              h={{ base: 10, sm: "fit-content" }}
               fw={400}
-              p={{ base: 2, lg: 4 }}
+              p={{ base: 2, sm: 4 }}
               style={{
                 borderRadius: isMobile ? 2 : 4,
               }}
               bg="#8BDBA344"
               c={"#00C270"}
               lts={"-2%"}
-              fz={{ base: 4.7, lg: 6, xl: 8 }}
+              fz={{ base: 7, sm: 8 }}
             >
               +16%
             </Text>
@@ -426,25 +429,25 @@ const BalaceItem = () => {
         >
           <Flex align={"center"} gap={4}>
             <Center
-              w={{ base: 11, lg: 21 }}
-              h={{ base: 11, lg: 21 }}
+              w={{ base: 11, sm: 21 }}
+              h={{ base: 11, sm: 21 }}
               bg={"#fff"}
               style={{
                 borderRadius: 21,
               }}
             >
               <Box
-                w={{ base: 4, lg: 8 }}
-                mt={{ base: -4, lg: 0 }}
-                mr={{ base: -1, lg: 0 }}
+                w={{ base: 4, sm: 8 }}
+                mt={{ base: -4, sm: 0 }}
+                mr={{ base: -1, sm: 0 }}
               >
-                <AspectRatio ratio={8 / 10} w={{ base: 4, lg: 8 }}>
+                <AspectRatio ratio={8 / 10} w={{ base: 4, sm: 8 }}>
                   <ArrowDown />
                 </AspectRatio>
               </Box>
             </Center>
 
-            <Text c={"#ffffffcc"} fz={{ base: 7, sm: 12 }}>
+            <Text c={"#ffffffcc"} fz={{ base: 10, sm: 12 }}>
               Expense
             </Text>
           </Flex>
@@ -455,30 +458,30 @@ const BalaceItem = () => {
             justify={"space-between"}
           >
             <Flex gap={{ base: 3 }} justify={"center"} align={"center"}>
-              <Text c={"#ffffffcc"} fz={{ base: 7, sm: 8, lg: 10, xl: 14 }}>
+              <Text c={"#ffffffcc"} fz={{ base: 12, xl: 14 }}>
                 0.00
               </Text>
               <Text
                 fw={300}
                 c={"#ffffffcc"}
-                fz={{ base: 5, sm: 8, lg: 10, xl: 6 }}
+                fz={{ base: 6, sm: 8 }}
+                mt={{ base: 1, sm: 2 }}
               >
                 USD
               </Text>
             </Flex>
 
             <Text
-              w={{ base: 16, sm: "auto" }}
-              h={{ base: 10, sm: "fit-content" }}
               fw={400}
-              p={{ base: 2, lg: 4 }}
+              p={{ base: 2, sm: 4 }}
               style={{
                 borderRadius: isMobile ? 2 : 4,
               }}
               bg="#DB8B8B44"
               c={"#FA5343"}
               lts={"-2%"}
-              fz={{ base: 4.7, lg: 6, xl: 8 }}
+              h={"fit-content"}
+              fz={{ base: 7, sm: 8 }}
             >
               -10%
             </Text>
@@ -489,7 +492,7 @@ const BalaceItem = () => {
   );
 };
 
-const SwapItem = () => {
+const SwapItem = ({ is991 }: { is991?: boolean }) => {
   const isMobile = useMediaQuery("(max-width: 431px)");
   const smallTablet = useMediaQuery(
     "(min-width: 991px) and (max-width: 1280px)"
@@ -498,6 +501,7 @@ const SwapItem = () => {
   return (
     <Box
       {...itemStyle}
+      maw={is991 ? 300 : 315}
       style={{
         borderRadius: isMobile ? 12 : 16,
       }}
@@ -521,12 +525,13 @@ const SwapItem = () => {
   );
 };
 
-const ChartItem = () => {
+const ChartItem = ({ is991 }: { is991?: boolean }) => {
   const isMobile = useMediaQuery("(max-width: 431px)");
 
   return (
     <Box
       {...itemStyle}
+      maw={is991 ? 300 : 315}
       data-aos={"slide-up"}
       data-aos-delay={200}
       style={{

@@ -56,8 +56,8 @@ function SelectInput({
                   border: "1px solid #ffffff44",
                 }}
                 bg={"transparent"}
-                w={{ base: 22, lg: 52 }}
-                h={{ base: 22, lg: 52 }}
+                w={{ base: 22, sm: 40, lg: 52 }}
+                h={{ base: 22, sm: 40, lg: 52 }}
                 radius={52}
               >
                 <Center w={"100%"} h={"100%"}>
@@ -89,7 +89,7 @@ function SelectInput({
             <Flex
               onClick={open}
               align={"center"}
-              gap={{ base: 2, lg: 9 }}
+              gap={{ base: 2, sm: 9 }}
               style={{
                 cursor: "pointer",
               }}
@@ -98,7 +98,7 @@ function SelectInput({
                 <Text
                   c={"#ffffffcc"}
                   lh={"90%"}
-                  fz={{ base: 8, lg: 12 }}
+                  fz={{ base: 8, sm: 12 }}
                   fw={400}
                 >
                   {coinData ? coinData.symbol : "Select"}
@@ -106,8 +106,8 @@ function SelectInput({
               </Button>
               <Box
                 h={"fit-content"}
-                w={{ base: 7.5, lg: 11 }}
-                mt={{ base: -3.5, lg: -4 }}
+                w={{ base: 7.5, sm: 11 }}
+                mt={{ base: -3.5, sm: -3 }}
               >
                 <AspectRatio ratio={8 / 6} w={"100%"} h={"100%"}>
                   <ArrowDownV2 />

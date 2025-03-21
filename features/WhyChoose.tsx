@@ -1,6 +1,7 @@
 import {
   AspectRatio,
   Box,
+  Center,
   Container,
   Divider,
   Flex,
@@ -16,7 +17,7 @@ import { useMediaQuery } from "@mantine/hooks";
 const data = [
   {
     icon: (
-      <AspectRatio ratio={1} w={{ base: 12, lg: 16 }}>
+      <AspectRatio ratio={1} w={{ base: 16, lg: 16 }}>
         <UserIcon />
       </AspectRatio>
     ),
@@ -27,7 +28,7 @@ const data = [
   },
   {
     icon: (
-      <AspectRatio ratio={1} w={{ base: 12, lg: 16 }}>
+      <AspectRatio ratio={1} w={{ base: 16, lg: 16 }}>
         <CircleIcon />
       </AspectRatio>
     ),
@@ -38,7 +39,7 @@ const data = [
   },
   {
     icon: (
-      <AspectRatio ratio={1} w={{ base: 12, lg: 16 }}>
+      <AspectRatio ratio={1} w={{ base: 16, lg: 16 }}>
         <CircleIcon />
       </AspectRatio>
     ),
@@ -49,7 +50,7 @@ const data = [
   },
   {
     icon: (
-      <AspectRatio ratio={1} w={{ base: 12, lg: 16 }}>
+      <AspectRatio ratio={1} w={{ base: 16, lg: 16 }}>
         <BarIcon />
       </AspectRatio>
     ),
@@ -61,8 +62,8 @@ const data = [
 ];
 
 function WhyChoose() {
-  const matches = useMediaQuery("(min-width: 61em) and (max-width: 90em)");
-  const is1440 = useMediaQuery("(min-width: 1440px) and (max-width: 1920px)");
+  const matches = useMediaQuery("(min-width: 991px) and (max-width: 1279px)");
+  const is1440 = useMediaQuery("(min-width: 1440px) and (max-width: 1919px)");
 
   return (
     <Container
@@ -103,28 +104,30 @@ function WhyChoose() {
       </Flex>
 
       <Flex
-        mt={{ lg: 40, xl: 60 }}
+        mt={{ base: 40, xl: 60 }}
         justify={"space-between"}
-        direction={{ base: "column", lg: "row" }}
+        direction={matches ? "row" : { base: "column", lg: "row" }}
+        wrap={"wrap"}
       >
         {data.map((e, i) => (
           <Flex
             key={i}
             direction={{ base: "column", xl: "row" }}
             data-aos={"fade-up"}
-            w={{ xl: "25%" }}
+            w={matches ? "50%" : { xl: "25%" }}
           >
             <FeatureItem {...e} />
             {i !== data.length - 1 && (
-              <Divider
-                visibleFrom="xl"
-                mx={is1440 ? 30 : { base: 60, lg: 75 }}
-                orientation={"vertical"}
-                variant={"dashed"}
-                h={"75%"}
-              />
+              <Center w={"100%"} maw={is1440 ? 107 : { base: 60, xl: 161 }}>
+                <Divider
+                  visibleFrom="xl"
+                  orientation={"vertical"}
+                  variant={"dashed"}
+                  h={"75%"}
+                />
+              </Center>
             )}
-            {i !== data.length - 1 && (
+            {i !== data.length - 1 && !matches && (
               <Divider hiddenFrom="lg" variant={"dashed"} my={20} />
             )}
           </Flex>
@@ -137,8 +140,10 @@ function WhyChoose() {
 type FeatureItemProps = (typeof data)[0];
 
 const FeatureItem = ({ icon, subTitle, title, content }: FeatureItemProps) => {
+  const is1440 = useMediaQuery("(min-width: 1440px) and (max-width: 1919px)");
+  const matches = useMediaQuery("(min-width: 61em) and (max-width: 90em)");
   return (
-    <Box w={{ base: "100%", lg: 220, xl: "80%" }}>
+    <Box mt={matches ? 40 : 0} w={{ base: "100%", lg: 220, xl: "80%" }}>
       <Flex
         align={"center"}
         gap={10}
@@ -151,7 +156,12 @@ const FeatureItem = ({ icon, subTitle, title, content }: FeatureItemProps) => {
         w={"fit-content"}
       >
         <Box mb={-6}>{icon}</Box>
-        <Text fw={500} lh={"100%"} c={"#fe8833"} fz={{ base: 11, xl: 16 }}>
+        <Text
+          fw={500}
+          lh={"100%"}
+          c={"#fe8833"}
+          fz={is1440 ? 11 : matches ? 16 : { base: 11, xl: 16 }}
+        >
           {subTitle}
         </Text>
       </Flex>
@@ -160,7 +170,8 @@ const FeatureItem = ({ icon, subTitle, title, content }: FeatureItemProps) => {
         lh={"120%"}
         fw={500}
         mt={{ base: 40, xl: 60 }}
-        fz={{ base: 16, xl: 24 }}
+        fz={is1440 ? 16 : matches ? 24 : { base: 16, xl: 24 }}
+        maw={{ base: 338, lg: 190, xl: 280 }}
       >
         {title}
       </Text>
@@ -170,7 +181,7 @@ const FeatureItem = ({ icon, subTitle, title, content }: FeatureItemProps) => {
         lh={"150%"}
         c={"#6b7280"}
         mt={{ base: 21, lg: 24, xl: 32 }}
-        fz={{ base: 11, lg: 16 }}
+        fz={is1440 ? 11 : matches ? 16 : { base: 11, lg: 16 }}
       >
         {content}
       </Text>

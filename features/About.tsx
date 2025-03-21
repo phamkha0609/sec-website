@@ -14,7 +14,10 @@ import { AboutBG, BackedImg, CardCollect, GatewayImg } from "../assets/imgs";
 import { useMediaQuery } from "@mantine/hooks";
 
 function About() {
-  const matches = useMediaQuery("(min-width: 61em) and (max-width: 90em)");
+  const matches = useMediaQuery("(min-width: 991px) and (max-width: 1279px)");
+  const isBigTablet = useMediaQuery(
+    "(min-width: 1280px) and (max-width: 1919px)"
+  );
   const is1440 = useMediaQuery("(min-width: 1440px) and (max-width: 1920px)");
 
   return (
@@ -55,7 +58,7 @@ function About() {
         >
           <Container
             fluid
-            px={matches ? 40 : { lg: 160 }}
+            px={matches ? 40 : isBigTablet ? 100 : { lg: 160 }}
             pt={{ base: 200, lg: 240, xl: 360 }}
           >
             <Flex

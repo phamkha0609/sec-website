@@ -18,7 +18,12 @@ import PolicyMenu from "../components/Footer/PolicyMenu";
 import { useMediaQuery } from "@mantine/hooks";
 
 function Footer() {
-  const isMobile = useMediaQuery("(max-width: 1280px)");
+  const isMobile = useMediaQuery("(max-width: 1279px)");
+  const isBigTablet = useMediaQuery(
+    "(min-width: 1280px) and (max-width: 1919px)"
+  );
+  const tablet = useMediaQuery("(min-width: 991px) and (max-width: 1279px)");
+
   return (
     <Box
       w={"100%"}
@@ -28,7 +33,11 @@ function Footer() {
       bg={isMobile ? "linear-gradient(#fffdfc, #fff)" : "#fff"}
     >
       <Box>
-        <Container fluid pt={"md"} px={{ base: 16, lg: 106, xl: 160 }}>
+        <Container
+          fluid
+          pt={{ base: 60, sm: 0 }}
+          px={isBigTablet ? 106 : { base: 16, lg: 106, xl: 160 }}
+        >
           <Flex
             direction={{ base: "column", sm: "row" }}
             align={"center"}
@@ -91,6 +100,7 @@ function Footer() {
                   mt={{ base: 22, xl: 33 }}
                   c={"#1F2937"}
                   fz={{ base: 12, xl: 16 }}
+                  maw={352}
                 >
                   SEC (Silver Exchange Center) was born with the mission to
                   revolutionize silver investment in Vietnam, bringing a
@@ -102,7 +112,7 @@ function Footer() {
             </Box>
 
             <Box w={{ base: "100%", lg: "45%" }}>
-              <CategoryMenu />
+              <CategoryMenu isTablet />
             </Box>
           </Flex>
         </Container>
@@ -115,20 +125,7 @@ function Footer() {
           px={{ base: 16, lg: 106, xl: 160 }}
           justify={"space-between"}
         >
-          <Text
-            w={{ base: "50%", lg: "40%" }}
-            c={"#1F2937"}
-            fz={{ base: 14, xl: 22 }}
-          >
-            © 2024 Copyright By SEC
-          </Text>
-
-          <Flex
-            w={{ base: "50%", sm: "20%" }}
-            gap={"md"}
-            justify={{ base: "flex-end", lg: "center" }}
-            align={"center"}
-          >
+          <Flex w={{ base: "50%", sm: "20%" }} gap={"md"} align={"center"}>
             <AspectRatio ratio={1} w={{ base: 27, xl: 40 }}>
               <Image src={LogoVectorDark.src} alt="" />
             </AspectRatio>
@@ -137,6 +134,15 @@ function Footer() {
               SEC
             </Text>
           </Flex>
+
+          <Text
+            w={{ base: "50%", lg: "40%" }}
+            c={"#1F2937"}
+            fz={{ base: 14, xl: 22 }}
+            ta={tablet ? "end" : "center"}
+          >
+            © 2024 Copyright By SEC
+          </Text>
 
           <Box w={{ base: "100%", lg: "40%" }}>
             <PolicyMenu />
