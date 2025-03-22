@@ -169,7 +169,7 @@ const FeatureItem = ({ icon, subTitle, title, content }: FeatureItemProps) => {
           fw={500}
           lh={"100%"}
           c={"#fe8833"}
-          fz={is1280 ? 14 : is1440 ? 11 : matches ? 16 : { base: 11, xl: 16 }}
+          fz={is1280 ? 14 : is1440 ? 11 : matches ? 11 : { base: 11, xl: 16 }}
         >
           {subTitle}
         </Text>
@@ -179,7 +179,7 @@ const FeatureItem = ({ icon, subTitle, title, content }: FeatureItemProps) => {
         lh={"120%"}
         fw={500}
         mt={{ base: 40, xl: 60 }}
-        fz={is1280 ? 16 : is1440 ? 16 : matches ? 24 : { base: 16, xl: 24 }}
+        fz={is1280 ? 16 : is1440 ? 16 : matches ? 16 : { base: 16, xl: 24 }}
         maw={{ base: 338, lg: 190, xl: 280 }}
       >
         {title}
@@ -190,7 +190,7 @@ const FeatureItem = ({ icon, subTitle, title, content }: FeatureItemProps) => {
         lh={"150%"}
         c={"#6b7280"}
         mt={{ base: 21, lg: 24, xl: 32 }}
-        fz={is1280 ? 13 : is1440 ? 11 : matches ? 16 : { base: 11, lg: 16 }}
+        fz={is1280 ? 13 : is1440 ? 11 : matches ? 11 : { base: 11, lg: 16 }}
       >
         {content}
       </Text>
