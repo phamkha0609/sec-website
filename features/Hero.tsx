@@ -350,21 +350,24 @@ const BalaceItem = ({ is991 }: { is991?: boolean }) => {
           h={"fit-content"}
         >
           <Flex align={"center"} gap={4}>
-            <Flex
+            <Center
               w={{ base: 11, sm: 21 }}
               h={{ base: 11, sm: 21 }}
               bg={"#fff"}
-              justify={"center"}
               style={{
                 borderRadius: 21,
               }}
             >
-              <Box w={{ base: 4, sm: 8 }}>
+              <Box
+                w={{ base: 4, sm: 8 }}
+                mt={{ base: -4, sm: 0 }}
+                mr={{ base: -1, sm: 0 }}
+              >
                 <AspectRatio ratio={8 / 10} w={{ base: 4, sm: 8 }}>
                   <ArrowUp />
                 </AspectRatio>
               </Box>
-            </Flex>
+            </Center>
 
             <Text c={"#ffffffcc"} fz={{ base: 10, sm: 12 }}>
               Income
@@ -428,7 +431,11 @@ const BalaceItem = ({ is991 }: { is991?: boolean }) => {
                 borderRadius: 21,
               }}
             >
-              <Box w={{ base: 4, sm: 8 }}>
+              <Box
+                w={{ base: 4, sm: 8 }}
+                mt={{ base: -4, sm: 0 }}
+                mr={{ base: -1, sm: 0 }}
+              >
                 <AspectRatio ratio={8 / 10} w={{ base: 4, sm: 8 }}>
                   <ArrowDown />
                 </AspectRatio>
@@ -497,7 +504,7 @@ const SwapItem = ({ is991 }: { is991?: boolean }) => {
       data-aos={"slide-up"}
       data-aos-delay={100}
       mih={{ base: smallTablet ? 257 : "auto", lg: "auto" }}
-      px={{ xl: 28 }}
+      px={{ base: 12, lg: 20, xl: 28 }}
     >
       <Text
         fw={500}
