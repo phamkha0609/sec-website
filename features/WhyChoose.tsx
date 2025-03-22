@@ -112,7 +112,7 @@ function WhyChoose() {
         {data.map((e, i) => (
           <Flex
             key={i}
-            direction={{ base: "column", xl: "row" }}
+            direction={matches ? "row" : { base: "column", xl: "row" }}
             data-aos={"fade-up"}
             w={matches ? "50%" : { xl: "25%" }}
           >
@@ -126,6 +126,14 @@ function WhyChoose() {
                   h={"75%"}
                 />
               </Center>
+            )}
+            {matches && (i == 0 || i == 2) && (
+              <Divider
+                orientation={"vertical"}
+                variant={"dashed"}
+                h={"75%"}
+                mr={60}
+              />
             )}
             {i !== data.length - 1 && !matches && (
               <Divider hiddenFrom="lg" variant={"dashed"} my={20} />
@@ -141,6 +149,7 @@ type FeatureItemProps = (typeof data)[0];
 
 const FeatureItem = ({ icon, subTitle, title, content }: FeatureItemProps) => {
   const is1440 = useMediaQuery("(min-width: 1440px) and (max-width: 1919px)");
+  const is1280 = useMediaQuery("(min-width: 1280px) and (max-width: 1439px)");
   const matches = useMediaQuery("(min-width: 61em) and (max-width: 90em)");
   return (
     <Box mt={matches ? 40 : 0} w={{ base: "100%", lg: 220, xl: "80%" }}>
@@ -160,7 +169,7 @@ const FeatureItem = ({ icon, subTitle, title, content }: FeatureItemProps) => {
           fw={500}
           lh={"100%"}
           c={"#fe8833"}
-          fz={is1440 ? 11 : matches ? 16 : { base: 11, xl: 16 }}
+          fz={is1280 ? 14 : is1440 ? 11 : matches ? 16 : { base: 11, xl: 16 }}
         >
           {subTitle}
         </Text>
@@ -170,7 +179,7 @@ const FeatureItem = ({ icon, subTitle, title, content }: FeatureItemProps) => {
         lh={"120%"}
         fw={500}
         mt={{ base: 40, xl: 60 }}
-        fz={is1440 ? 16 : matches ? 24 : { base: 16, xl: 24 }}
+        fz={is1280 ? 16 : is1440 ? 16 : matches ? 24 : { base: 16, xl: 24 }}
         maw={{ base: 338, lg: 190, xl: 280 }}
       >
         {title}
@@ -181,7 +190,7 @@ const FeatureItem = ({ icon, subTitle, title, content }: FeatureItemProps) => {
         lh={"150%"}
         c={"#6b7280"}
         mt={{ base: 21, lg: 24, xl: 32 }}
-        fz={is1440 ? 11 : matches ? 16 : { base: 11, lg: 16 }}
+        fz={is1280 ? 13 : is1440 ? 11 : matches ? 16 : { base: 11, lg: 16 }}
       >
         {content}
       </Text>
