@@ -142,7 +142,7 @@ function Footer() {
             fz={{ base: 14, xl: 22 }}
             ta={tablet ? "end" : "center"}
           >
-            © 2024 Copyright By SEC
+            © 2025 Copyright By SEC
           </Text>
 
           <Box w={{ base: "100%", lg: "40%" }}>

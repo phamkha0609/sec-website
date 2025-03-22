@@ -350,24 +350,21 @@ const BalaceItem = ({ is991 }: { is991?: boolean }) => {
           h={"fit-content"}
         >
           <Flex align={"center"} gap={4}>
-            <Center
+            <Flex
               w={{ base: 11, sm: 21 }}
               h={{ base: 11, sm: 21 }}
               bg={"#fff"}
+              justify={"center"}
               style={{
                 borderRadius: 21,
               }}
             >
-              <Box
-                w={{ base: 4, sm: 8 }}
-                mt={{ base: -4, sm: 0 }}
-                mr={{ base: -1, sm: 0 }}
-              >
+              <Box w={{ base: 4, sm: 8 }} h={{ base: 4, sm: 8 }}>
                 <AspectRatio ratio={8 / 10} w={{ base: 4, sm: 8 }}>
                   <ArrowUp />
                 </AspectRatio>
               </Box>
-            </Center>
+            </Flex>
 
             <Text c={"#ffffffcc"} fz={{ base: 10, sm: 12 }}>
               Income
@@ -431,11 +428,7 @@ const BalaceItem = ({ is991 }: { is991?: boolean }) => {
                 borderRadius: 21,
               }}
             >
-              <Box
-                w={{ base: 4, sm: 8 }}
-                mt={{ base: -4, sm: 0 }}
-                mr={{ base: -1, sm: 0 }}
-              >
+              <Box w={{ base: 4, sm: 8 }}>
                 <AspectRatio ratio={8 / 10} w={{ base: 4, sm: 8 }}>
                   <ArrowDown />
                 </AspectRatio>
