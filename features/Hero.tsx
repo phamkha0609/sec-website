@@ -407,7 +407,8 @@ const BalaceItem = ({ is991 }: { is991?: boolean }) => {
               bg="#8BDBA344"
               c={"#00C270"}
               lts={"-2%"}
-              fz={{ base: 7, sm: 8 }}
+              lh={"100%"}
+              fz={{ base: 7, sm: 8, xl: 10 }}
             >
               +16%
             </Text>
@@ -472,8 +473,9 @@ const BalaceItem = ({ is991 }: { is991?: boolean }) => {
               bg="#DB8B8B44"
               c={"#FA5343"}
               lts={"-2%"}
+              lh={"100%"}
               h={"fit-content"}
-              fz={{ base: 7, sm: 8 }}
+              fz={{ base: 7, sm: 8, xl: 10 }}
             >
               -10%
             </Text>
