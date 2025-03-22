@@ -359,7 +359,7 @@ const BalaceItem = ({ is991 }: { is991?: boolean }) => {
                 borderRadius: 21,
               }}
             >
-              <Box w={{ base: 4, sm: 8 }} h={{ base: 4, sm: 8 }}>
+              <Box w={{ base: 4, sm: 8 }}>
                 <AspectRatio ratio={8 / 10} w={{ base: 4, sm: 8 }}>
                   <ArrowUp />
                 </AspectRatio>

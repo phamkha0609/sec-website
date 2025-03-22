@@ -28,6 +28,7 @@ import AboutIcon from "./AboutIcon.png";
 import EcosystemIcon from "./EcosystemIcon.png";
 import RevenueIcon from "./RevenueIcon.png";
 import BlogIcon from "./BlogIcon.png";
+import Logo from "./Logo.png";
 
 export {
   HeroBG,
@@ -59,5 +60,6 @@ export {
   AboutIcon,
   EcosystemIcon,
   RevenueIcon,
-  BlogIcon
+  BlogIcon,
+  Logo
 };

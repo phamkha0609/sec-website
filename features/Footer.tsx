@@ -10,12 +10,12 @@ import {
   Title,
 } from "@mantine/core";
 import React from "react";
-import { LogoVectorDark } from "../assets/imgs";
 import ArrowUpRight from "../assets/vectors/ArrowUpRight";
 import SocialMenu from "../components/Footer/SocialMenu";
 import CategoryMenu from "../components/Footer/CategoryMenu";
 import PolicyMenu from "../components/Footer/PolicyMenu";
 import { useMediaQuery } from "@mantine/hooks";
+import { Logo } from "../assets/imgs";
 
 function Footer() {
   const isMobile = useMediaQuery("(max-width: 1279px)");
@@ -128,7 +128,7 @@ function Footer() {
         >
           <Flex w={{ base: "50%", sm: "20%" }} gap={"md"} align={"center"}>
             <AspectRatio ratio={1} w={{ base: 27, xl: 40 }}>
-              <Image src={LogoVectorDark.src} alt="" />
+              <Image src={Logo.src} alt="" />
             </AspectRatio>
 
             <Text c={"#1f2937"} fw={500} fz={{ base: 20, xl: 32 }}>

@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import Menu from "./Menu";
 import CustomButton from "./CustomButton";
 import MobileMenu from "./MobileMenu";
-import LogoVector from "../../assets/vectors/LogoVector";
+import { Logo } from "../../assets/imgs";
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -41,7 +41,7 @@ function Navbar() {
       <Flex gap={{ base: 8, xl: 12 }} align={"center"}>
         <Box>
           <AspectRatio ratio={1} w={{ base: 27, xl: 40 }}>
-            <LogoVector />
+            <Image src={Logo.src} />
           </AspectRatio>
         </Box>
         <Text c={"#fff"} fz={{ base: 21, xl: 32 }} fw={500}>
