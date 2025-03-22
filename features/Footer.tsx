@@ -50,6 +50,7 @@ function Footer() {
                 lh={"100%"}
                 fz={{ base: 40, xl: 80 }}
                 c={"#1F2937"}
+                fw={500}
               >
                 Let’s Talk
               </Text>

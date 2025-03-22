@@ -504,6 +504,7 @@ const SwapItem = ({ is991 }: { is991?: boolean }) => {
       data-aos={"slide-up"}
       data-aos-delay={100}
       mih={{ base: smallTablet ? 257 : "auto", lg: "auto" }}
+      px={{ xl: 28 }}
     >
       <Text
         fw={500}
