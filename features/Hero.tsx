@@ -347,6 +347,7 @@ const BalaceItem = ({ is991 }: { is991?: boolean }) => {
           p={{ base: 4, sm: 8 }}
           radius={isMobile ? 6 : 12}
           w={{ base: "50%", sm: "50%" }}
+          h={"fit-content"}
         >
           <Flex align={"center"} gap={4}>
             <Center
@@ -374,7 +375,7 @@ const BalaceItem = ({ is991 }: { is991?: boolean }) => {
           </Flex>
 
           <Flex
-            mt={{ base: 6, sm: 12 }}
+            mt={{ base: 6, sm: 13 }}
             gap={{ base: 32, sm: 20 }}
             justify={"space-between"}
           >
@@ -417,6 +418,7 @@ const BalaceItem = ({ is991 }: { is991?: boolean }) => {
         <Paper
           w={{ base: "50%", lg: "50%" }}
           bg={"#ffffff10"}
+          h={"fit-content"}
           p={{ base: 4, sm: 8 }}
           radius={isMobile ? 6 : 12}
         >
@@ -446,12 +448,12 @@ const BalaceItem = ({ is991 }: { is991?: boolean }) => {
           </Flex>
 
           <Flex
-            mt={{ base: 6, sm: 12 }}
+            mt={{ base: 6, sm: 13 }}
             gap={{ base: 32, sm: 20 }}
             justify={"space-between"}
           >
             <Flex gap={{ base: 3 }} justify={"center"} align={"center"}>
-              <Text c={"#ffffffcc"} fz={{ base: 12, xl: 14 }}>
+              <Text lh={"100%"} c={"#ffffffcc"} fz={{ base: 12, xl: 14 }}>
                 0.00
               </Text>
               <Text
