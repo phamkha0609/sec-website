@@ -123,9 +123,19 @@ function Footer() {
           wrap={"wrap"}
           align={"center"}
           py={{ base: 16, xl: 24 }}
-          px={{ base: 16, lg: 106, xl: 160 }}
+          px={isBigTablet ? 106 : { base: 16, lg: 106, xl: 160 }}
           justify={"space-between"}
         >
+          {!isMobile && (
+            <Text
+              w={{ base: "50%", lg: "40%" }}
+              c={"#1F2937"}
+              fz={{ base: 14, xl: 22 }}
+            >
+              © 2025 Copyright By SEC
+            </Text>
+          )}
+
           <Flex w={{ base: "50%", sm: "20%" }} gap={"md"} align={"center"}>
             <AspectRatio ratio={1} w={{ base: 27, xl: 40 }}>
               <Image src={Logo.src} alt="" />
@@ -136,14 +146,16 @@ function Footer() {
             </Text>
           </Flex>
 
-          <Text
-            w={{ base: "50%", lg: "40%" }}
-            c={"#1F2937"}
-            fz={{ base: 14, xl: 22 }}
-            ta={tablet ? "end" : "center"}
-          >
-            © 2025 Copyright By SEC
-          </Text>
+          {isMobile && (
+            <Text
+              w={{ base: "50%", lg: "40%" }}
+              c={"#1F2937"}
+              fz={{ base: 14, xl: 22 }}
+              ta={"right"}
+            >
+              © 2025 Copyright By SEC
+            </Text>
+          )}
 
           <Box w={{ base: "100%", lg: "40%" }}>
             <PolicyMenu />
