@@ -147,6 +147,7 @@ const RevenueItem = ({ Icon, title }: RevenueItemProps) => {
     "(min-width: 1280px) and (max-width: 1919px)"
   );
   const is1440 = useMediaQuery("(min-width: 1440px) and (max-width: 1919px)");
+  const is991 = useMediaQuery("(min-width: 991px) and (max-width: 1279px)");
   const { ref, hovered } = useHover();
   return (
     <BackgroundImage
@@ -180,7 +181,9 @@ const RevenueItem = ({ Icon, title }: RevenueItemProps) => {
 
           <Text
             fw={500}
-            fz={isBigTablet ? 14 : { base: 12, lg: 20 }}
+            fz={
+              is1440 ? 18 : isBigTablet ? 14 : is991 ? 14 : { base: 12, lg: 20 }
+            }
             mt={{ base: 16, lg: 32 }}
             ta={"center"}
             c={hovered ? "#000" : "#6B728088"}

@@ -18,14 +18,14 @@ function About() {
   const isBigTablet = useMediaQuery(
     "(min-width: 1280px) and (max-width: 1919px)"
   );
-  const is1440 = useMediaQuery("(min-width: 1440px) and (max-width: 1920px)");
+  const is1440 = useMediaQuery("(min-width: 1440px) and (max-width: 1919px)");
 
   return (
     <Box bg={"#000000"} pos={"relative"} id="about">
       <Box
         pos={"absolute"}
         left={matches ? "10%" : { base: "5%", lg: "20%", xl: "15%" }}
-        top={is1440 ? "55%" : { base: "55%", lg: "50%", xl: "70%" }}
+        top={is1440 ? "70%" : { base: "55%", lg: "50%" }}
         style={{
           zIndex: 2,
         }}

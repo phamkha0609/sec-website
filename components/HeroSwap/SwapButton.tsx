@@ -1,4 +1,4 @@
-import { ActionIcon, AspectRatio } from "@mantine/core";
+import { ActionIcon, AspectRatio, Box, Center } from "@mantine/core";
 import React from "react";
 import SwapIcon from "../../assets/vectors/SwapIcon";
 
@@ -17,9 +17,17 @@ function SwapButton({ onClick }: SwapButtonProps) {
       radius={52}
       mx={{ base: 10, lg: "auto" }}
     >
-      <AspectRatio ratio={22 / 20} w={{ base: 12, sm: 22 }}>
-        <SwapIcon />
-      </AspectRatio>
+      <Center>
+        <Box>
+          <AspectRatio
+            ratio={22 / 19}
+            w={{ base: 12, sm: 22 }}
+            mb={{ base: -1.5, sm: -4 }}
+          >
+            <SwapIcon />
+          </AspectRatio>
+        </Box>
+      </Center>
     </ActionIcon>
   );
 }

@@ -104,7 +104,7 @@ function WhyChoose() {
       </Flex>
 
       <Flex
-        mt={{ base: 40, xl: 60 }}
+        mt={matches ? 0 : { base: 40, xl: 60 }}
         justify={"space-between"}
         direction={matches ? "row" : { base: "column", lg: "row" }}
         wrap={"wrap"}
@@ -118,7 +118,7 @@ function WhyChoose() {
           >
             <FeatureItem {...e} />
             {i !== data.length - 1 && (
-              <Center w={"100%"} maw={is1440 ? 107 : { base: 60, xl: 161 }}>
+              <Center w={"100%"} maw={is1440 ? 61 : { base: 60, xl: 161 }}>
                 <Divider
                   visibleFrom="xl"
                   orientation={"vertical"}
@@ -131,8 +131,9 @@ function WhyChoose() {
               <Divider
                 orientation={"vertical"}
                 variant={"dashed"}
-                h={"75%"}
+                h={matches ? "90%" : "75%"}
                 mr={60}
+                mt={matches ? "10%" : 0}
               />
             )}
             {i !== data.length - 1 && !matches && (
@@ -179,7 +180,7 @@ const FeatureItem = ({ icon, subTitle, title, content }: FeatureItemProps) => {
         lh={"120%"}
         fw={500}
         mt={{ base: 40, xl: 60 }}
-        fz={is1280 ? 16 : is1440 ? 16 : matches ? 16 : { base: 16, xl: 24 }}
+        fz={is1280 ? 16 : is1440 ? 20 : matches ? 16 : { base: 16, xl: 24 }}
         maw={{ base: 338, lg: 190, xl: 280 }}
       >
         {title}
@@ -190,7 +191,7 @@ const FeatureItem = ({ icon, subTitle, title, content }: FeatureItemProps) => {
         lh={"150%"}
         c={"#6b7280"}
         mt={{ base: 21, lg: 24, xl: 32 }}
-        fz={is1280 ? 13 : is1440 ? 11 : matches ? 11 : { base: 11, lg: 16 }}
+        fz={is1280 ? 13 : is1440 ? 16 : matches ? 11 : { base: 11, lg: 16 }}
       >
         {content}
       </Text>

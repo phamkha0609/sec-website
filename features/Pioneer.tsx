@@ -18,6 +18,7 @@ import {
   CommunityMobileBG,
   DiscoverButton,
   Platform,
+  PolyLight,
   SECLogo,
 } from "../assets/imgs";
 
@@ -30,6 +31,7 @@ function Pioneer() {
   const isBigTablet = useMediaQuery(
     "(min-width: 1280px) and (max-width: 1439px)"
   );
+  const is1440 = useMediaQuery("(min-width: 1440px) and (max-width: 1919px)");
 
   return (
     <Box
@@ -121,7 +123,9 @@ function Pioneer() {
             <Center
               pos={"absolute"}
               w={"100%"}
-              bottom={isBigTablet ? 320 : { base: "25%", xl: 520 }}
+              bottom={
+                is1440 ? 250 : isBigTablet ? 320 : { base: "25%", xl: 520 }
+              }
             >
               <Box>
                 <Text

@@ -29,6 +29,7 @@ import EcosystemIcon from "./EcosystemIcon.png";
 import RevenueIcon from "./RevenueIcon.png";
 import BlogIcon from "./BlogIcon.png";
 import Logo from "./Logo.png";
+import PolyLight from "./PolyLight.png";
 
 export {
   HeroBG,
@@ -61,5 +62,6 @@ export {
   EcosystemIcon,
   RevenueIcon,
   BlogIcon,
-  Logo
+  Logo,
+  PolyLight
 };
