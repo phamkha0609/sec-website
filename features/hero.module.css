@@ -1,19 +1,19 @@
 @keyframes move-anim {
     0% {
         top: -200px;
-        right: 80px;
+        right: 0px;
         transform: rotate(10deg) scale(1);
         opacity: 1;
     }
     50% {
         top: 0px;
-        right: 40px;
+        right: 60px;
         transform: rotate(-50deg) scale(1);
         opacity: 1;
     }
     100% {
         top: 200px;
-        right: 20px;
+        right: 140px;
         transform: rotate(-100deg) scale(0.75);
         opacity: 1;
     }
