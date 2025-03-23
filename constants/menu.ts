@@ -124,22 +124,22 @@ export const headerMenu = [
   },
   {
     title: "About Us",
-    link: "#about",
+    link: "/#about",
     icon: AboutIcon
   },
   {
     title: "Revenue",
-    link: "#revenue",
+    link: "/#revenue",
     icon: RevenueIcon
   },
   {
     title: "Ecosystem",
-    link: "#ecosystem",
+    link: "/#ecosystem",
     icon: EcosystemIcon
   },
   {
     title: "Blog",
-    link: "/app",
+    link: "/block",
     icon: BlogIcon
   },
 ];

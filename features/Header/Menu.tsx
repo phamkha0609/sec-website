@@ -61,8 +61,10 @@ function Menu({ toggle }: MenuProps) {
   };
 
   useEffect(() => {
-    setCurrentActive(pathname);
-  }, []);
+    setCurrentActive(
+      pathname.length > 1 ? pathname : `/${window.location.hash}`
+    );
+  }, [window.location.hash]);
 
   return (
     <Flex direction={{ base: "column", lg: "row" }}>
