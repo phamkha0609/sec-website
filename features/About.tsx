@@ -95,14 +95,20 @@ function About() {
             <Center>
               <Box>
                 <AspectRatio
+                  mx={"auto"}
                   ratio={503 / 569}
-                  w={{ base: "90%", sm: 400, lg: 503 }}
+                  w={is1440 ? 380 : { base: "90%", sm: 320, lg: 503 }}
                   data-aos={"fade-up"}
                 >
                   <Image src={GatewayImg.src} alt="" />
                 </AspectRatio>
                 <Box mx={"auto"} w={"fit-content"} mt={{ base: 20, lg: 40 }}>
-                  <Text fw={500} fz={{ base: 15, xl: 20 }} c={"#1f2937"}>
+                  <Text
+                    ta={"center"}
+                    fw={500}
+                    fz={{ base: 15, xl: 20 }}
+                    c={"#1f2937"}
+                  >
                     Bridging Physical Silver with Digital Innovation
                   </Text>
                   <Text fz={{ base: 15, xl: 20 }} c={"#6B7280"}>

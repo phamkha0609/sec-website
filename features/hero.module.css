@@ -7,13 +7,13 @@
     }
     50% {
         top: 0px;
-        right: 60px;
+        right: 50px;
         transform: rotate(-50deg) scale(1);
         opacity: 1;
     }
     100% {
         top: 200px;
-        right: 140px;
+        right: 70px;
         transform: rotate(-100deg) scale(0.75);
         opacity: 1;
     }
