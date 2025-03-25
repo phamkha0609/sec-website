@@ -86,7 +86,7 @@ function Hero() {
                 style={{
                   borderRadius: 100,
                   border: "1px solid #C0C0C088",
-                  clipPath: "inset(-500px 0 0 -500px)",
+                  clipPath: "inset(-500px 0 0.4px -500px)",
                 }}
                 pos={"relative"}
               >
@@ -160,7 +160,7 @@ function Hero() {
                 style={{
                   borderRadius: 100,
                   border: "1px solid #C0C0C088",
-                  clipPath: "inset(0 0 -500px -500px)",
+                  clipPath: "inset(0.4px 0 -500px -500px)",
                 }}
                 pos={"relative"}
               >
