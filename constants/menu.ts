@@ -139,7 +139,7 @@ export const headerMenu = [
   },
   {
     title: "Blog",
-    link: "/block",
+    link: "/blog",
     icon: BlogIcon
   },
 ];

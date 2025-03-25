@@ -100,7 +100,7 @@ function Footer() {
                 <Text
                   mt={{ base: 22, xl: 33 }}
                   c={"#1F2937"}
-                  fz={{ base: 12, xl: 16 }}
+                  fz={{ base: 13, xl: 16 }}
                   maw={352}
                 >
                   SEC (Silver Exchange Center) was born with the mission to
@@ -136,7 +136,7 @@ function Footer() {
             </Text>
           )}
 
-          <Flex w={{ base: "50%", sm: "20%" }} gap={"md"} align={"center"}>
+          <Flex w={{ base: "50%", sm: "20%" }} gap={"xs"} align={"center"}>
             <AspectRatio ratio={1} w={{ base: 27, xl: 40 }}>
               <Image src={Logo.src} alt="" />
             </AspectRatio>

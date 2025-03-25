@@ -64,6 +64,7 @@ const data = [
 function WhyChoose() {
   const matches = useMediaQuery("(min-width: 991px) and (max-width: 1279px)");
   const is1440 = useMediaQuery("(min-width: 1440px) and (max-width: 1919px)");
+  const is1280 = useMediaQuery("(min-width: 1280px) and (max-width: 1439px)");
 
   return (
     <Container
@@ -115,19 +116,28 @@ function WhyChoose() {
             direction={matches ? "row" : { base: "column", xl: "row" }}
             data-aos={"fade-up"}
             w={matches ? "50%" : { xl: "25%" }}
+            style={{
+              borderRight:
+                is1280 && i !== data.length - 1 ? "1px dashed #D1D5DB" : "none",
+            }}
+            pr={is1280 ? 20 : 0}
+            pl={is1280 && i != 0 ? 21 : 0}
           >
             <FeatureItem {...e} />
             {i !== data.length - 1 && (
-              <Center w={"100%"} maw={is1440 ? 61 : { base: 60, xl: 161 }}>
+              <Center
+                w={is1280 ? 40 : "100%"}
+                maw={is1280 ? 20 : is1440 ? 81 : { base: 60, xl: 161 }}
+              >
                 <Divider
-                  visibleFrom="xl"
+                  visibleFrom="lg"
                   orientation={"vertical"}
                   variant={"dashed"}
                   h={"75%"}
                 />
               </Center>
             )}
-            {matches && (i == 0 || i == 2) && (
+            {!is1280 && matches && (i == 0 || i == 2) && (
               <Divider
                 orientation={"vertical"}
                 variant={"dashed"}
@@ -191,7 +201,7 @@ const FeatureItem = ({ icon, subTitle, title, content }: FeatureItemProps) => {
         lh={"150%"}
         c={"#6b7280"}
         mt={{ base: 21, lg: 24, xl: 32 }}
-        fz={is1280 ? 13 : is1440 ? 16 : matches ? 11 : { base: 11, lg: 16 }}
+        fz={is1280 ? 13 : is1440 ? 16 : matches ? 11 : { base: 13, lg: 16 }}
       >
         {content}
       </Text>
