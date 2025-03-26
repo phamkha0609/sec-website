@@ -1,0 +1,42 @@
+.arrow-anim {
+    opacity: 1;
+    animation: arrow-animation 2s linear infinite;
+}
+
+.arrow-anim2 {
+    opacity: 1;
+    animation: arrow-animation 2s linear infinite;
+    animation-delay: 0.2s;
+}
+
+.arrow-anim3 {
+    opacity: 1;
+    animation: arrow-animation 2s linear infinite;
+    animation-delay: 0.4s;
+}
+
+.arrow-anim4 {
+    opacity: 1;
+    animation: arrow-animation 2s linear infinite;
+    animation-delay: 0.6s;
+}
+
+.arrow-anim5 {
+    opacity: 1;
+    animation: arrow-animation 2s linear infinite;
+    animation-delay: 0.8s;
+}
+
+@keyframes arrow-animation {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

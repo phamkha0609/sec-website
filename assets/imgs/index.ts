@@ -30,6 +30,7 @@ import RevenueIcon from "./RevenueIcon.png";
 import BlogIcon from "./BlogIcon.png";
 import Logo from "./Logo.png";
 import PolyLight from "./PolyLight.png";
+import ArrowAnim from "./ArrowAnim.png";
 
 export {
   HeroBG,
@@ -63,5 +64,6 @@ export {
   RevenueIcon,
   BlogIcon,
   Logo,
-  PolyLight
+  PolyLight,
+  ArrowAnim
 };
