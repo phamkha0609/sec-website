@@ -165,22 +165,22 @@ function Hero() {
                 pos={"relative"}
               >
                 <Box opacity={0} pos={"absolute"} className={styles[`sec`]}>
-                  <AspectRatio ratio={64 / 78} w={{ base: 32, sm: 42, xl: 64 }}>
+                  <AspectRatio ratio={1} w={{ base: 42, sm: 67, xl: 70 }}>
                     <Image src={SECLogo.src} alt="" />
                   </AspectRatio>
                 </Box>
                 <Box opacity={0} pos={"absolute"} className={styles[`sec2`]}>
-                  <AspectRatio ratio={64 / 78} w={{ base: 32, sm: 42, xl: 64 }}>
+                  <AspectRatio ratio={1} w={{ base: 42, sm: 67, xl: 70 }}>
                     <Image src={SECLogo.src} alt="" />
                   </AspectRatio>
                 </Box>
                 <Box opacity={0} pos={"absolute"} className={styles[`sec3`]}>
-                  <AspectRatio ratio={64 / 78} w={{ base: 32, sm: 42, xl: 64 }}>
+                  <AspectRatio ratio={1} w={{ base: 42, sm: 67, xl: 70 }}>
                     <Image src={SECLogo.src} alt="" />
                   </AspectRatio>
                 </Box>
                 <Box opacity={0} pos={"absolute"} className={styles[`sec4`]}>
-                  <AspectRatio ratio={64 / 78} w={{ base: 32, sm: 42, xl: 64 }}>
+                  <AspectRatio ratio={1} w={{ base: 42, sm: 67, xl: 70 }}>
                     <Image src={SECLogo.src} alt="" />
                   </AspectRatio>
                 </Box>

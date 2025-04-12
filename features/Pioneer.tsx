@@ -101,7 +101,7 @@ function Pioneer() {
                   right={"47%"}
                   className={styles["floating"]}
                 >
-                  <AspectRatio ratio={77 / 93} w={{ base: 36, lg: 51, xl: 77 }}>
+                  <AspectRatio ratio={1} w={{ base: 36, lg: 51, xl: 77 }}>
                     <Image src={SECLogo.src} alt="" />
                   </AspectRatio>
                 </Box>
