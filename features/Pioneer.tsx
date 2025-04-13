@@ -17,6 +17,7 @@ import {
   CommunityBG,
   CommunityMobileBG,
   DiscoverButton,
+  FloatingCoin,
   Platform,
   PolyLight,
   SECLogo,
@@ -102,7 +103,7 @@ function Pioneer() {
                   className={styles["floating"]}
                 >
                   <AspectRatio ratio={1} w={{ base: 36, lg: 51, xl: 77 }}>
-                    <Image src={SECLogo.src} alt="" />
+                    <Image src={FloatingCoin.src} alt="" />
                   </AspectRatio>
                 </Box>
               </BackgroundImage>
