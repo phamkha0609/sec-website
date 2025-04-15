@@ -61,16 +61,16 @@
 }
 
 .sec {
-    animation: moveout-anim 8s linear infinite;
+    animation: moveout-anim 6s linear infinite;
 }
 
 .sec2 {
-    animation: moveout-anim 8s linear infinite;
+    animation: moveout-anim 6s linear infinite;
     animation-delay: 2s;
 }
 
 .sec3 {
-    animation: moveout-anim 8s linear infinite;
+    animation: moveout-anim 6s linear infinite;
     animation-delay: 4s;
 }
 .sec4 {
