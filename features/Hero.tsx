@@ -168,17 +168,17 @@ function Hero() {
                 pos={"relative"}
               >
                 <Box opacity={0} pos={"absolute"} className={styles[`sec`]}>
-                  <AspectRatio ratio={67 / 70} w={{ base: 42, sm: 67, xl: 70 }}>
+                  <AspectRatio ratio={67 / 70} w={{ base: 62, sm: 67, xl: 70 }}>
                     <Image src={LogoHeader.src} alt="" />
                   </AspectRatio>
                 </Box>
                 <Box opacity={0} pos={"absolute"} className={styles[`sec2`]}>
-                  <AspectRatio ratio={67 / 70} w={{ base: 42, sm: 67, xl: 70 }}>
+                  <AspectRatio ratio={67 / 70} w={{ base: 62, sm: 67, xl: 70 }}>
                     <Image src={LogoHeader2.src} alt="" />
                   </AspectRatio>
                 </Box>
                 <Box opacity={0} pos={"absolute"} className={styles[`sec3`]}>
-                  <AspectRatio ratio={67 / 70} w={{ base: 42, sm: 67, xl: 70 }}>
+                  <AspectRatio ratio={67 / 70} w={{ base: 62, sm: 67, xl: 70 }}>
                     <Image src={LogoHeader3.src} alt="" />
                   </AspectRatio>
                 </Box>
