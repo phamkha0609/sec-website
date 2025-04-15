@@ -136,7 +136,12 @@ function Footer() {
             </Text>
           )}
 
-          <Flex w={{ base: "50%", sm: "20%" }} gap={"xs"} align={"center"}>
+          <Flex
+            w={{ base: "50%", sm: "20%" }}
+            gap={"xs"}
+            align={"center"}
+            justify={{ base: "flex-start", md: "center" }}
+          >
             <AspectRatio ratio={1} w={{ base: 27, xl: 40 }}>
               <Image src={LogoHeader.src} alt="" />
             </AspectRatio>

@@ -33,6 +33,8 @@ import PolyLight from "./PolyLight.png";
 import ArrowAnim from "./ArrowAnim.png";
 import LogoHeader from "./LogoHeader.png";
 import FloatingCoin from "./FloatingCoin.png";
+import LogoHeader2 from "./LogoHeader2.png";
+import LogoHeader3 from "./LogoHeader3.png";
 
 export {
   HeroBG,
@@ -69,5 +71,7 @@ export {
   PolyLight,
   ArrowAnim,
   LogoHeader,
-  FloatingCoin
+  FloatingCoin,
+  LogoHeader2,
+  LogoHeader3
 };

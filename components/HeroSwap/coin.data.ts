@@ -1,10 +1,10 @@
 import { StaticImageData } from "next/image";
-import { Bitcoin, SECCoin, TetherCoin } from "../../assets/imgs";
+import { Bitcoin, LogoHeader, SECCoin, TetherCoin } from "../../assets/imgs";
 
 export const coinDataList: CoinDataProps[] = [
   {
     symbol: "SEC",
-    icon: SECCoin,
+    icon: LogoHeader,
     name: "SEC Coin",
   },
   {
